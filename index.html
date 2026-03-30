@@ -330,6 +330,117 @@
       gap: 24px;
     }
 
+    .testimonials-shell {
+      position: relative;
+    }
+
+    .testimonial-slider {
+      position: relative;
+      overflow: hidden;
+    }
+
+    .testimonial-track {
+      display: flex;
+      transition: transform .45s ease;
+      will-change: transform;
+    }
+
+    .testimonial-slide {
+      min-width: 100%;
+      flex: 0 0 100%;
+    }
+
+    .testimonial-card {
+      background: var(--paper);
+      border-radius: 30px;
+      border: 1px solid var(--line);
+      box-shadow: var(--shadow);
+      padding: 44px;
+      max-width: 920px;
+      margin: 0 auto;
+      text-align: left;
+    }
+
+    .testimonial-quote-mark {
+      font-family: "Cormorant Garamond", Georgia, serif;
+      font-size: 4.5rem;
+      line-height: .7;
+      color: var(--accent);
+      margin-bottom: 14px;
+      display: block;
+    }
+
+    .testimonial-card h3 {
+      font-size: clamp(2rem, 3vw, 2.9rem);
+      margin-bottom: 14px;
+    }
+
+    .testimonial-card .quote {
+      color: var(--ink);
+      font-size: 1.1rem;
+      max-width: 54ch;
+      margin-bottom: 20px;
+    }
+
+    .testimonial-meta {
+      color: var(--muted);
+      font-size: .98rem;
+      margin-bottom: 0;
+    }
+
+    .testimonial-controls {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      gap: 14px;
+      margin-top: 26px;
+    }
+
+    .testimonial-arrow {
+      width: 52px;
+      height: 52px;
+      border-radius: 50%;
+      border: 1px solid var(--line);
+      background: #fff;
+      color: var(--ink);
+      font-size: 1.2rem;
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      cursor: pointer;
+      transition: transform .2s ease, background .2s ease, border-color .2s ease;
+      box-shadow: var(--shadow-soft);
+    }
+
+    .testimonial-arrow:hover {
+      transform: translateY(-1px);
+      background: #faf8f5;
+      border-color: rgba(0,0,0,.14);
+    }
+
+    .testimonial-dots {
+      display: flex;
+      gap: 8px;
+      align-items: center;
+      justify-content: center;
+    }
+
+    .testimonial-dot {
+      width: 10px;
+      height: 10px;
+      border-radius: 50%;
+      border: 0;
+      background: rgba(0,0,0,.15);
+      cursor: pointer;
+      transition: transform .2s ease, background .2s ease;
+      padding: 0;
+    }
+
+    .testimonial-dot.active {
+      background: var(--accent);
+      transform: scale(1.15);
+    }
+
     .why-grid { grid-template-columns: repeat(3, 1fr); }
     .services-grid { grid-template-columns: repeat(3, 1fr); }
     .gallery-grid { grid-template-columns: repeat(4, 1fr); }
@@ -924,21 +1035,46 @@
           <p>Our clients often tell us the same thing — the process felt easy, organized, and far less stressful than they expected.</p>
         </div>
 
-        <div class="reviews-grid">
-          <div class="review">
-            <h3>"So easy to work with."</h3>
-            <p class="quote">They made everything feel smooth and natural, and we loved not having to coordinate separate photo and video teams.</p>
-            <p><strong>— Client Name</strong></p>
+        <div class="testimonials-shell">
+          <div class="testimonial-slider" aria-label="Client testimonials slider">
+            <div class="testimonial-track" id="testimonialTrack">
+              <div class="testimonial-slide">
+                <article class="testimonial-card">
+                  <span class="testimonial-quote-mark">“</span>
+                  <h3>So easy to work with.</h3>
+                  <p class="quote">They made everything feel smooth and natural, and we loved not having to coordinate separate photo and video teams. Everything felt polished from beginning to end.</p>
+                  <p class="testimonial-meta"><strong>— Client Name</strong> • Wedding Collection</p>
+                </article>
+              </div>
+
+              <div class="testimonial-slide">
+                <article class="testimonial-card">
+                  <span class="testimonial-quote-mark">“</span>
+                  <h3>They captured the feel of the day.</h3>
+                  <p class="quote">The photos were stunning, but the film is what took us right back into the emotion of it all. Every part of it felt elegant, intentional, and beautifully done.</p>
+                  <p class="testimonial-meta"><strong>— Client Name</strong> • Signature Collection</p>
+                </article>
+              </div>
+
+              <div class="testimonial-slide">
+                <article class="testimonial-card">
+                  <span class="testimonial-quote-mark">“</span>
+                  <h3>Professional, calm, and beautifully organized.</h3>
+                  <p class="quote">They brought such a calm presence to the day and made everything feel effortless. We felt taken care of, and the final gallery and film exceeded what we hoped for.</p>
+                  <p class="testimonial-meta"><strong>— Client Name</strong> • Full Experience Collection</p>
+                </article>
+              </div>
+            </div>
           </div>
-          <div class="review">
-            <h3>"They captured the feel of the day."</h3>
-            <p class="quote">The photos were stunning, but the film is what took us right back into the emotion of it all.</p>
-            <p><strong>— Client Name</strong></p>
-          </div>
-          <div class="review">
-            <h3>"Professional and heartfelt."</h3>
-            <p class="quote">Everything felt polished, calm, and intentional from the first message to final delivery.</p>
-            <p><strong>— Client Name</strong></p>
+
+          <div class="testimonial-controls">
+            <button class="testimonial-arrow" type="button" aria-label="Previous testimonial" onclick="moveTestimonial(-1)">←</button>
+            <div class="testimonial-dots" aria-label="Testimonial navigation">
+              <button class="testimonial-dot active" type="button" aria-label="Go to testimonial 1" onclick="goToTestimonial(0)"></button>
+              <button class="testimonial-dot" type="button" aria-label="Go to testimonial 2" onclick="goToTestimonial(1)"></button>
+              <button class="testimonial-dot" type="button" aria-label="Go to testimonial 3" onclick="goToTestimonial(2)"></button>
+            </div>
+            <button class="testimonial-arrow" type="button" aria-label="Next testimonial" onclick="moveTestimonial(1)">→</button>
           </div>
         </div>
       </div>
@@ -985,6 +1121,29 @@
       <div>Designed for GitHub Pages • Keep images in the root folder</div>
     </div>
   </footer>
+  <script>
+    let testimonialIndex = 0;
+
+    function updateTestimonials() {
+      const track = document.getElementById('testimonialTrack');
+      const dots = document.querySelectorAll('.testimonial-dot');
+      if (!track) return;
+      track.style.transform = `translateX(-${testimonialIndex * 100}%)`;
+      dots.forEach((dot, index) => {
+        dot.classList.toggle('active', index === testimonialIndex);
+      });
+    }
+
+    function moveTestimonial(direction) {
+      const total = document.querySelectorAll('.testimonial-slide').length;
+      testimonialIndex = (testimonialIndex + direction + total) % total;
+      updateTestimonials();
+    }
+
+    function goToTestimonial(index) {
+      testimonialIndex = index;
+      updateTestimonials();
+    }
+  </script>
 </body>
 </html>
-
