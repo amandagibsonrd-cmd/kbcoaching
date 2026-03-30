@@ -656,37 +656,228 @@
 
     .video-block {
       display: grid;
-      grid-template-columns: 1fr 1fr;
+      grid-template-columns: .9fr 1.1fr;
       gap: 0;
       align-items: stretch;
-      background: linear-gradient(145deg, #171311, #211b18);
+      background: linear-gradient(145deg, #14110f, #221a15 55%, #2d221b);
       color: white;
       border-radius: 38px;
       overflow: hidden;
       box-shadow: var(--shadow);
       border: 1px solid rgba(255,255,255,.08);
+      position: relative;
+      isolation: isolate;
+    }
+
+    .video-block::before {
+      content: "";
+      position: absolute;
+      inset: 0;
+      background: radial-gradient(circle at top right, rgba(182,154,69,.18), transparent 30%);
+      pointer-events: none;
+      z-index: 0;
     }
 
     .video-copy {
-      padding: 48px;
+      padding: 56px 54px;
       display: flex;
       flex-direction: column;
       justify-content: center;
+      position: relative;
+      z-index: 1;
     }
 
     .video-copy p, .video-copy .eyebrow { color: rgba(255,255,255,.76); }
 
-    .video-frame {
-      aspect-ratio: 16/9;
-      min-height: 100%;
-      border-left: 1px solid rgba(255,255,255,.08);
+    .video-copy h2 {
+      max-width: 10ch;
+      margin-bottom: 18px;
     }
 
-    .video-frame iframe {
+    .video-feature-meta {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px;
+      margin: 22px 0 8px;
+    }
+
+    .video-feature-badge {
+      display: inline-flex;
+      align-items: center;
+      padding: 8px 12px;
+      border-radius: 999px;
+      background: rgba(255,255,255,.08);
+      border: 1px solid rgba(255,255,255,.12);
+      color: rgba(255,255,255,.86);
+      font-size: .74rem;
+      letter-spacing: .12em;
+      text-transform: uppercase;
+      font-weight: 600;
+    }
+
+    .video-note {
+      margin-top: 16px;
+      font-size: .92rem;
+      color: rgba(255,255,255,.64);
+      max-width: 34ch;
+    }
+
+    .video-frame {
+      position: relative;
+      min-height: 100%;
+      border-left: 1px solid rgba(255,255,255,.08);
+      padding: 22px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      z-index: 1;
+    }
+
+    .video-cinematic-card {
+      position: relative;
+      width: 100%;
+      aspect-ratio: 16 / 9;
+      border-radius: 28px;
+      overflow: hidden;
+      background: #0d0b0a;
+      box-shadow: 0 18px 50px rgba(0,0,0,.28);
+      border: 1px solid rgba(255,255,255,.12);
+    }
+
+    .video-cinematic-card::before {
+      content: "";
+      position: absolute;
+      inset: 0;
+      background:
+        linear-gradient(180deg, rgba(0,0,0,.08), rgba(0,0,0,.5)),
+        url('video-cover.jpg') center/cover no-repeat;
+      z-index: 0;
+      transform: scale(1.02);
+    }
+
+    .video-cinematic-card iframe {
+      position: absolute;
+      inset: 0;
       width: 100%;
       height: 100%;
-      min-height: 460px;
       border: 0;
+      opacity: 0;
+      pointer-events: none;
+      transition: opacity .35s ease;
+      z-index: 1;
+    }
+
+    .video-cinematic-card.playing iframe {
+      opacity: 1;
+      pointer-events: auto;
+    }
+
+    .video-overlay {
+      position: absolute;
+      inset: 0;
+      z-index: 2;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      padding: 26px;
+      background: linear-gradient(180deg, rgba(0,0,0,.06), rgba(0,0,0,.62));
+      transition: opacity .3s ease, visibility .3s ease;
+    }
+
+    .video-cinematic-card.playing .video-overlay {
+      opacity: 0;
+      visibility: hidden;
+      pointer-events: none;
+    }
+
+    .video-topline {
+      display: flex;
+      justify-content: space-between;
+      align-items: flex-start;
+      gap: 16px;
+    }
+
+    .video-runtime {
+      display: inline-flex;
+      align-items: center;
+      padding: 8px 12px;
+      border-radius: 999px;
+      background: rgba(255,255,255,.1);
+      border: 1px solid rgba(255,255,255,.14);
+      color: rgba(255,255,255,.88);
+      font-size: .72rem;
+      font-weight: 600;
+      letter-spacing: .14em;
+      text-transform: uppercase;
+      width: fit-content;
+    }
+
+    .video-bottom {
+      max-width: 78%;
+    }
+
+    .video-play {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      width: 84px;
+      height: 84px;
+      border-radius: 50%;
+      border: 1px solid rgba(255,255,255,.24);
+      background: rgba(255,255,255,.12);
+      backdrop-filter: blur(8px);
+      color: #fff;
+      display: grid;
+      place-items: center;
+      cursor: pointer;
+      box-shadow: 0 10px 30px rgba(0,0,0,.28);
+      transition: transform .25s ease, background .25s ease;
+    }
+
+    .video-play:hover {
+      transform: translate(-50%, -50%) scale(1.04);
+      background: rgba(182,154,69,.28);
+    }
+
+    .video-play::before {
+      content: "";
+      margin-left: 5px;
+      border-left: 18px solid #fff;
+      border-top: 11px solid transparent;
+      border-bottom: 11px solid transparent;
+    }
+
+    .video-label {
+      display: inline-flex;
+      align-items: center;
+      width: fit-content;
+      margin-bottom: 10px;
+      padding: 8px 12px;
+      border-radius: 999px;
+      background: rgba(255,255,255,.1);
+      border: 1px solid rgba(255,255,255,.14);
+      color: rgba(255,255,255,.86);
+      font-size: .72rem;
+      font-weight: 600;
+      letter-spacing: .14em;
+      text-transform: uppercase;
+    }
+
+    .video-title {
+      font-family: "Cormorant Garamond", Georgia, serif;
+      font-size: clamp(1.9rem, 3vw, 2.9rem);
+      line-height: .96;
+      margin: 0 0 10px;
+      color: #fff;
+      max-width: 11ch;
+    }
+
+    .video-subtitle {
+      margin: 0;
+      color: rgba(255,255,255,.82);
+      max-width: 34ch;
+      font-size: .98rem;
     }
 
     .contact-panel {
@@ -818,9 +1009,33 @@
       .video-frame {
         border-left: 0;
         border-top: 1px solid rgba(255,255,255,.08);
+        padding: 18px;
       }
 
-      .video-frame iframe { min-height: 260px; }
+      .video-cinematic-card {
+        min-height: 260px;
+      }
+
+      .video-copy {
+        padding: 32px 24px;
+      }
+
+      .video-overlay {
+        padding: 20px;
+      }
+
+      .video-bottom {
+        max-width: 100%;
+      }
+
+      .video-play {
+        width: 72px;
+        height: 72px;
+      }
+
+      .video-title {
+        font-size: 1.8rem;
+      }
       section { padding: 68px 0; }
       .service-img, .gallery-item { min-height: 300px; }
       .portfolio-card,
@@ -986,12 +1201,31 @@
         <div class="video-block">
           <div class="video-copy">
             <div class="eyebrow">Featured film</div>
-            <h2 style="font-size:clamp(2.4rem,4vw,4rem);">Film captures what photos can’t.</h2>
-            <p>Video brings movement, voice, and emotion back to life. When combined with photography, it allows you to not only see the day again, but feel it again.</p>
-            <a class="btn btn-secondary" href="#contact" style="width: fit-content; margin-top: 8px;">Ask About Video</a>
+            <h2 style="font-size:clamp(2.4rem,4vw,4rem);">See what your day can feel like on film.</h2>
+            <p>This section is ready to function like a cinematic featured trailer instead of a standard embedded video. Use a still frame from your best wedding film as the cover image so the section feels polished before anyone even presses play.</p>
+            <div class="video-feature-meta">
+              <span class="video-feature-badge">Featured Wedding Film</span>
+              <span class="video-feature-badge">Photo + Video Team</span>
+              <span class="video-feature-badge">South Louisiana</span>
+            </div>
+            <p class="video-note">To finish this section, replace <strong>YOUR_VIDEO_ID</strong> in the embed link and add your cover image as <strong>video-cover.jpg</strong> in the same folder as the site files.</p>
+            <a class="btn btn-secondary" href="#contact" style="width: fit-content; margin-top: 10px;">Ask About Video</a>
           </div>
           <div class="video-frame">
-            <iframe src="https://www.youtube.com/embed/YOUR_VIDEO_ID" title="1Shot Productions featured video" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+            <div class="video-cinematic-card" id="featuredVideoCard">
+              <iframe id="featuredVideoFrame" src="https://www.youtube.com/embed/YOUR_VIDEO_ID?enablejsapi=1&rel=0&modestbranding=1&playsinline=1" title="1Shot Productions featured video" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+              <div class="video-overlay">
+                <div class="video-topline">
+                  <span class="video-runtime">Now Showing</span>
+                </div>
+                <button class="video-play" type="button" aria-label="Play featured film" onclick="playFeaturedVideo()"></button>
+                <div class="video-bottom">
+                  <span class="video-label">Luxury Wedding Film</span>
+                  <h3 class="video-title">An elegant film that lets your clients step back inside the day.</h3>
+                  <p class="video-subtitle">Choose a cover image with the couple in motion, soft light, and clean composition for the most cinematic look.</p>
+                </div>
+              </div>
+            </div>
           </div>
         </div>
       </div>
@@ -1176,6 +1410,15 @@
     function goToTestimonial(index) {
       testimonialIndex = index;
       updateTestimonials();
+    }
+
+    function playFeaturedVideo() {
+      const card = document.getElementById('featuredVideoCard');
+      const frame = document.getElementById('featuredVideoFrame');
+      if (!card || !frame) return;
+      card.classList.add('playing');
+      const baseSrc = frame.getAttribute('src').split('&autoplay=1')[0];
+      frame.setAttribute('src', `${baseSrc}&autoplay=1`);
     }
   </script>
 </body>
