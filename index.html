@@ -1,0 +1,969 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>1Shot Productions | South Louisiana Photo + Video</title>
+  <meta name="description" content="1Shot Productions brings 1 Shot Photos and EP Productions together to offer heartfelt wedding, event, and portrait photography and videography packages across South Louisiana." />
+  <meta name="keywords" content="South Louisiana photographer, South Louisiana videographer, wedding photography Louisiana, wedding videography Louisiana, Houma photographer, Thibodaux videographer, 1Shot Productions" />
+  <meta name="author" content="1Shot Productions" />
+  <meta property="og:title" content="1Shot Productions | South Louisiana Photo + Video" />
+  <meta property="og:description" content="Photo and videography packages for weddings, events, and love stories in South Louisiana." />
+  <meta property="og:type" content="website" />
+  <meta property="og:image" content="hero.jpg" />
+  <meta property="og:url" content="https://yourgithubusername.github.io/1shotproductions/" />
+  <link rel="icon" href="favicon.png" />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Cormorant+Garamond:wght@500;600;700&display=swap" rel="stylesheet">
+
+  <style>
+    :root {
+      --bg: #ffffff;
+      --paper: #ffffff;
+      --paper-solid: #ffffff;
+      --ink: #111111;
+      --muted: #6a6a6a;
+      --accent: #c9a96a;
+      --accent-dark: #a88952;
+      --line: rgba(0,0,0,0.08);
+      --deep: #111111;
+      --shadow: 0 20px 50px rgba(0,0,0,.06);
+      --shadow-soft: 0 10px 30px rgba(0,0,0,.04);
+      --radius: 22px;
+      --radius-lg: 28px;
+      --max: 1240px;
+    }
+
+    * { box-sizing: border-box; }
+    html { scroll-behavior: smooth; }
+    body {
+      margin: 0;
+      font-family: "Inter", Arial, sans-serif;
+      background: #ffffff;
+      color: var(--ink);
+      line-height: 1.65;
+      -webkit-font-smoothing: antialiased;
+      text-rendering: optimizeLegibility;
+    }
+
+    img { max-width: 100%; display: block; }
+    a { color: inherit; text-decoration: none; }
+
+    .container {
+      width: min(var(--max), calc(100% - 32px));
+      margin: 0 auto;
+    }
+
+    .eyebrow {
+      letter-spacing: .22em;
+      text-transform: uppercase;
+      font-size: .75rem;
+      color: var(--accent);
+      font-weight: 700;
+      margin-bottom: 12px;
+    }
+
+    h1, h2, h3, h4 {
+      font-family: "Cormorant Garamond", Georgia, serif;
+      line-height: .98;
+      margin: 0 0 16px;
+      font-weight: 600;
+      letter-spacing: -.02em;
+    }
+
+    p { margin: 0 0 16px; color: var(--muted); }
+    strong { color: var(--ink); }
+
+    .btn {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      padding: 14px 24px;
+      border-radius: 999px;
+      border: 1px solid transparent;
+      font-weight: 600;
+      transition: transform .25s ease, background .25s ease, border-color .25s ease, color .25s ease;
+      cursor: pointer;
+      font-size: .96rem;
+    }
+
+    .btn:hover { transform: translateY(-1px); }
+
+    .btn-primary {
+      background: var(--ink);
+      color: white;
+      box-shadow: var(--shadow-soft);
+    }
+
+    .btn-primary:hover { background: #000; }
+
+    .btn-secondary {
+      border-color: rgba(255,255,255,.22);
+      color: white;
+      background: rgba(255,255,255,.08);
+      backdrop-filter: blur(10px);
+    }
+
+    .btn-secondary:hover {
+      background: rgba(255,255,255,.16);
+      border-color: rgba(255,255,255,.36);
+    }
+
+    .btn-outline {
+      border-color: var(--line);
+      color: var(--ink);
+      background: rgba(255,255,255,.55);
+      backdrop-filter: blur(12px);
+    }
+
+    .btn-outline:hover { background: #fff; }
+
+    header {
+      position: sticky;
+      top: 0;
+      z-index: 50;
+      backdrop-filter: blur(18px);
+      background: rgba(250,247,242,.72);
+      border-bottom: 1px solid rgba(94, 73, 58, 0.08);
+    }
+
+    .nav {
+      min-height: 82px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 20px;
+    }
+
+    .brand {
+      display: flex;
+      align-items: center;
+      gap: 14px;
+      font-weight: 700;
+      letter-spacing: .08em;
+      text-transform: uppercase;
+      font-size: .82rem;
+    }
+
+    .brand-mark {
+      width: 46px;
+      height: 46px;
+      border-radius: 50%;
+      display: grid;
+      place-items: center;
+      background: linear-gradient(145deg, #211b18, #0e0b09);
+      color: #fff;
+      font-size: .95rem;
+      box-shadow: var(--shadow-soft);
+    }
+
+    nav ul {
+      list-style: none;
+      display: flex;
+      gap: 28px;
+      padding: 0;
+      margin: 0;
+      align-items: center;
+    }
+
+    nav a {
+      color: var(--muted);
+      font-size: .95rem;
+      font-weight: 500;
+      transition: color .2s ease;
+    }
+
+    nav a:hover { color: var(--ink); }
+
+    .menu-toggle {
+      display: none;
+      background: none;
+      border: 0;
+      font-size: 1.5rem;
+      color: var(--ink);
+    }
+
+    .hero {
+      padding: 26px 0 30px;
+    }
+
+    .hero-wrap {
+      display: grid;
+      grid-template-columns: 1.2fr .8fr;
+      gap: 24px;
+      align-items: stretch;
+    }
+
+    .hero-copy,
+    .hero-media,
+    .card,
+    .package,
+    .review,
+    .contact-panel {
+      border-radius: var(--radius-lg);
+      overflow: hidden;
+      box-shadow: var(--shadow);
+      border: 1px solid var(--line);
+    }
+
+    .hero-copy {
+      position: relative;
+      background: url('hero.jpg') center/cover no-repeat;
+      color: white;
+      padding: 90px 60px 60px;
+      min-height: 720px;
+      display: flex;
+      flex-direction: column;
+      justify-content: flex-end;
+    }
+
+    .hero-copy::before {
+      content: "";
+      position: absolute;
+      inset: 18px;
+      border-radius: calc(var(--radius-lg) - 10px);
+      border: 1px solid rgba(255,255,255,.14);
+      pointer-events: none;
+    }
+
+    .hero-copy > * { position: relative; z-index: 1; }
+
+    .hero-copy p,
+    .hero-copy .eyebrow { color: rgba(255,255,255,.84); }
+
+    .hero-copy h1 {
+      font-size: clamp(3.3rem, 6vw, 6rem);
+      max-width: 10ch;
+      margin-bottom: 18px;
+    }
+
+    .hero-copy .lead {
+      max-width: 570px;
+      font-size: 1.06rem;
+    }
+
+    .hero-actions {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 14px;
+      margin-top: 24px;
+    }
+
+    .hero-media {
+      display: grid;
+      grid-template-rows: 1.15fr .85fr;
+      gap: 0;
+      background: var(--paper);
+      backdrop-filter: blur(20px);
+    }
+
+    .hero-photo {
+      background: url('feature.jpg') center/cover no-repeat;
+      min-height: 390px;
+      position: relative;
+    }
+
+    .hero-photo::after {
+      content: "";
+      position: absolute;
+      inset: 0;
+      background: linear-gradient(180deg, rgba(0,0,0,.03), rgba(0,0,0,.12));
+    }
+
+    .hero-card {
+      padding: 38px 34px;
+      background: rgba(255,253,251,0.78);
+      backdrop-filter: blur(14px);
+      border-top: 1px solid var(--line);
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+    }
+
+    .hero-card h2 {
+      font-size: clamp(2rem, 3vw, 2.8rem);
+      margin-bottom: 14px;
+    }
+
+    section {
+      padding: 92px 0;
+    }
+
+    .section-head {
+      max-width: 760px;
+      margin-bottom: 36px;
+    }
+
+    .section-head h2 {
+      font-size: clamp(2.4rem, 4vw, 4.2rem);
+      margin-bottom: 12px;
+    }
+
+    .why-grid,
+    .services-grid,
+    .gallery-grid,
+    .reviews-grid,
+    .package-grid,
+    .contact-grid {
+      display: grid;
+      gap: 24px;
+    }
+
+    .why-grid { grid-template-columns: repeat(3, 1fr); }
+    .services-grid { grid-template-columns: repeat(3, 1fr); }
+    .gallery-grid { grid-template-columns: repeat(4, 1fr); }
+    .portfolio-split {
+      display: grid;
+      grid-template-columns: .95fr 1.05fr;
+      gap: 28px;
+      align-items: stretch;
+    }
+    .portfolio-stack {
+      display: grid;
+      gap: 24px;
+    }
+    .portfolio-card {
+      position: relative;
+      min-height: 680px;
+      border-radius: 34px;
+      overflow: hidden;
+      box-shadow: var(--shadow);
+      border: 1px solid var(--line);
+      background: #ddd center/cover no-repeat;
+    }
+    .portfolio-card.tall { min-height: 820px; }
+    .portfolio-card.medium { min-height: 398px; }
+    .portfolio-card::after {
+      content: "";
+      position: absolute;
+      inset: 0;
+      background: linear-gradient(180deg, rgba(9,8,8,.04), rgba(9,8,8,.52));
+    }
+    .portfolio-content {
+      position: absolute;
+      inset: auto 0 0 0;
+      z-index: 2;
+      padding: 28px 28px 24px;
+      color: white;
+    }
+    .portfolio-kicker {
+      display: inline-block;
+      font-size: .72rem;
+      letter-spacing: .18em;
+      text-transform: uppercase;
+      color: rgba(255,255,255,.72);
+      margin-bottom: 10px;
+      font-weight: 700;
+    }
+    .portfolio-title {
+      font-family: "Cormorant Garamond", Georgia, serif;
+      font-size: clamp(2rem, 3vw, 3.2rem);
+      line-height: .95;
+      margin: 0 0 10px;
+    }
+    .portfolio-card p {
+      color: rgba(255,255,255,.82);
+      max-width: 30ch;
+      margin: 0;
+    }
+    .reviews-grid { grid-template-columns: repeat(3, 1fr); }
+    .package-grid { grid-template-columns: repeat(3, 1fr); align-items: stretch; }
+    .contact-grid { grid-template-columns: 1fr 1fr; align-items: start; }
+
+    .card,
+    .review,
+    .contact-panel {
+      background: var(--paper);
+      backdrop-filter: blur(18px);
+    }
+
+    .card {
+      padding: 32px;
+    }
+
+    .card h3,
+    .package h3,
+    .review h3 { font-size: 1.95rem; }
+
+    .icon {
+      width: 56px;
+      height: 56px;
+      border-radius: 18px;
+      display: grid;
+      place-items: center;
+      background: linear-gradient(180deg, rgba(142,109,87,.12), rgba(142,109,87,.06));
+      color: var(--accent-dark);
+      font-weight: 700;
+      margin-bottom: 20px;
+      border: 1px solid rgba(142,109,87,.12);
+    }
+
+    .service-img,
+    .gallery-item {
+      border-radius: 28px;
+      overflow: hidden;
+      position: relative;
+      min-height: 340px;
+      background: #ddd center/cover no-repeat;
+      box-shadow: var(--shadow);
+      border: 1px solid var(--line);
+    }
+
+    .service-img::after,
+    .gallery-item::after {
+      content: "";
+      position: absolute;
+      inset: 0;
+      background: linear-gradient(180deg, rgba(0,0,0,.04), rgba(0,0,0,.48));
+      transition: opacity .28s ease;
+    }
+
+    .service-img:hover::after,
+    .gallery-item:hover::after { opacity: .8; }
+
+    .service-label,
+    .gallery-label {
+      position: absolute;
+      left: 22px;
+      bottom: 20px;
+      z-index: 2;
+      color: white;
+      font-family: "Cormorant Garamond", Georgia, serif;
+      font-size: 1.7rem;
+      line-height: 1;
+    }
+
+    .package {
+      padding: 0;
+      display: flex;
+      flex-direction: column;
+      background: var(--paper-solid);
+    }
+
+    .package-media {
+      height: 270px;
+      background: #ddd center/cover no-repeat;
+      position: relative;
+    }
+
+    .package-media::after {
+      content: "";
+      position: absolute;
+      inset: 0;
+      background: linear-gradient(180deg, rgba(0,0,0,.02), rgba(0,0,0,.12));
+    }
+
+    .package-body {
+      padding: 32px;
+      display: flex;
+      flex-direction: column;
+      gap: 12px;
+      flex: 1;
+    }
+
+    .price {
+      font-size: 2.35rem;
+      font-family: "Cormorant Garamond", Georgia, serif;
+      color: var(--ink);
+      margin: 6px 0;
+      line-height: 1;
+    }
+
+    .tag {
+      display: inline-flex;
+      padding: 8px 13px;
+      border-radius: 999px;
+      background: rgba(142,109,87,.10);
+      color: var(--accent-dark);
+      font-size: .78rem;
+      font-weight: 700;
+      letter-spacing: .12em;
+      text-transform: uppercase;
+      width: fit-content;
+    }
+
+    .package ul {
+      padding-left: 18px;
+      margin: 0 0 10px;
+      color: var(--muted);
+    }
+
+    .package li { margin-bottom: 8px; }
+
+    .review {
+      padding: 32px;
+    }
+
+    .review p.quote {
+      color: var(--ink);
+      font-size: 1.02rem;
+    }
+
+    .video-block {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 0;
+      align-items: stretch;
+      background: linear-gradient(145deg, #171311, #211b18);
+      color: white;
+      border-radius: 38px;
+      overflow: hidden;
+      box-shadow: var(--shadow);
+      border: 1px solid rgba(255,255,255,.08);
+    }
+
+    .video-copy {
+      padding: 48px;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+    }
+
+    .video-copy p, .video-copy .eyebrow { color: rgba(255,255,255,.76); }
+
+    .video-frame {
+      aspect-ratio: 16/9;
+      min-height: 100%;
+      border-left: 1px solid rgba(255,255,255,.08);
+    }
+
+    .video-frame iframe {
+      width: 100%;
+      height: 100%;
+      min-height: 460px;
+      border: 0;
+    }
+
+    .contact-panel {
+      padding: 36px;
+    }
+
+    .contact-list {
+      display: grid;
+      gap: 14px;
+      margin-top: 22px;
+    }
+
+    .contact-item {
+      padding: 17px 18px;
+      border: 1px solid var(--line);
+      border-radius: 18px;
+      background: rgba(255,255,255,.84);
+      box-shadow: var(--shadow-soft);
+    }
+
+    form {
+      display: grid;
+      gap: 14px;
+    }
+
+    input, textarea, select {
+      width: 100%;
+      padding: 15px 16px;
+      border-radius: 18px;
+      border: 1px solid rgba(94, 73, 58, 0.16);
+      font: inherit;
+      background: rgba(255,255,255,.90);
+      color: var(--ink);
+      transition: border-color .2s ease, box-shadow .2s ease;
+    }
+
+    input:focus, textarea:focus, select:focus {
+      outline: none;
+      border-color: rgba(142,109,87,.46);
+      box-shadow: 0 0 0 4px rgba(142,109,87,.08);
+    }
+
+    textarea {
+      min-height: 150px;
+      resize: vertical;
+    }
+
+    footer {
+      padding: 34px 0 48px;
+      border-top: 1px solid rgba(0,0,0,.06);
+    }
+
+    .footer-wrap {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-between;
+      gap: 20px;
+      color: var(--muted);
+      font-size: .92rem;
+    }
+
+    @media (max-width: 1100px) {
+      .hero-wrap,
+      .video-block,
+      .contact-grid,
+      .why-grid,
+      .services-grid,
+      .reviews-grid,
+      .package-grid,
+      .gallery-grid,
+      .portfolio-split {
+        grid-template-columns: 1fr 1fr;
+      }
+
+      .hero-copy { min-height: 620px; }
+      .gallery-grid { grid-template-columns: repeat(2, 1fr); }
+      .portfolio-card,
+      .portfolio-card.tall { min-height: 620px; }
+      .portfolio-card.medium { min-height: 300px; }
+    }
+
+    @media (max-width: 760px) {
+      .menu-toggle { display: block; }
+      nav {
+        position: absolute;
+        top: 82px;
+        left: 0;
+        right: 0;
+        background: rgba(250,247,242,.98);
+        border-bottom: 1px solid var(--line);
+        display: none;
+      }
+
+      nav.open { display: block; }
+
+      nav ul {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 16px;
+        padding: 18px 16px 22px;
+      }
+
+      .hero-wrap,
+      .video-block,
+      .contact-grid,
+      .why-grid,
+      .services-grid,
+      .reviews-grid,
+      .package-grid,
+      .gallery-grid,
+      .portfolio-split {
+        grid-template-columns: 1fr;
+      }
+
+      .hero-copy {
+        padding: 54px 24px 34px;
+        min-height: 560px;
+      }
+
+      .hero-card,
+      .video-copy,
+      .contact-panel,
+      .card,
+      .review,
+      .package-body {
+        padding: 24px;
+      }
+
+      .video-frame {
+        border-left: 0;
+        border-top: 1px solid rgba(255,255,255,.08);
+      }
+
+      .video-frame iframe { min-height: 260px; }
+      section { padding: 68px 0; }
+      .service-img, .gallery-item { min-height: 300px; }
+      .portfolio-card,
+      .portfolio-card.tall,
+      .portfolio-card.medium { min-height: 420px; }
+      .portfolio-content { padding: 22px 22px 20px; }
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <div class="container nav">
+      <a href="#home" class="brand" aria-label="1Shot Productions home">
+        <span class="brand-mark">1S</span>
+        <span>1Shot Productions</span>
+      </a>
+
+      <button class="menu-toggle" aria-label="Toggle menu" onclick="document.querySelector('nav').classList.toggle('open')">☰</button>
+
+      <nav>
+        <ul>
+          <li><a href="#home">Home</a></li>
+          <li><a href="#about">About</a></li>
+          <li><a href="#services">Services</a></li>
+          <li><a href="#work">Portfolio</a></li>
+          <li><a href="#packages">Packages</a></li>
+          <li><a href="#contact">Contact</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <section class="hero" id="home">
+      <div class="container hero-wrap">
+        <div class="hero-copy">
+          <div class="eyebrow">South Louisiana photo + film</div>
+          <h1>Luxury photography and videography for modern celebrations.</h1>
+          <p class="lead">1 Shot Photos and EP Productions are joining forces as <strong>1Shot Productions</strong> to offer refined photography and videography packages for weddings, couples, families, and events across South Louisiana.</p>
+          <div class="hero-actions">
+            <a class="btn btn-primary" href="#contact">Inquire Now</a>
+            <a class="btn btn-secondary" href="#packages">Explore Packages</a>
+          </div>
+        </div>
+
+        <div class="hero-media">
+          <div class="hero-photo" aria-label="Featured 1Shot Productions image"></div>
+          <div class="hero-card">
+            <div class="eyebrow">A seamless experience</div>
+            <h2>One creative direction for both photo and video.</h2>
+            <p>Instead of booking separate teams, your clients can work with one coordinated brand that understands the aesthetic, timing, and emotion of the day from beginning to end.</p>
+            <a class="btn btn-outline" href="#about" style="width: fit-content; margin-top: 8px;">Learn More</a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="about">
+      <div class="container">
+        <div class="section-head">
+          <div class="eyebrow">About 1Shot Productions</div>
+          <h2>A luxury photo and video experience, designed to be seamless.</h2>
+          <p>1Shot Productions brings together 1 Shot Photos and EP Productions to offer high-end photography and videography services across South Louisiana. Our focus is a clean, modern, luxury look and a smooth, professional experience from booking to final delivery.</p>
+        </div>
+
+        <div class="why-grid">
+          <div class="card">
+            <div class="icon">01</div>
+            <h3>Luxury aesthetic</h3>
+            <p>A cleaner, more editorial style that still feels warm, emotional, and true to the moment.</p>
+          </div>
+          <div class="card">
+            <div class="icon">02</div>
+            <h3>Professional experience</h3>
+            <p>We focus on the atmosphere, connection, and details that make a day feel unforgettable.</p>
+          </div>
+          <div class="card">
+            <div class="icon">03</div>
+            <h3>Photo + video together</h3>
+            <p>Photo and video work in sync, creating a smoother client experience and a more cohesive final result.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="services">
+      <div class="container">
+        <div class="section-head">
+          <div class="eyebrow">Services</div>
+          <h2>Luxury coverage for weddings, portraits, and events.</h2>
+          <p>This layout is designed to feel more luxurious and current, with fewer bulky sections and more visual breathing room.</p>
+        </div>
+
+        <div class="services-grid">
+          <div class="service-img" style="background-image:url('service-weddings.jpg');">
+            <div class="service-label">Weddings</div>
+          </div>
+          <div class="service-img" style="background-image:url('service-couples.jpg');">
+            <div class="service-label">Couples + Engagements</div>
+          </div>
+          <div class="service-img" style="background-image:url('service-events.jpg');">
+            <div class="service-label">Events + Celebrations</div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="work">
+      <div class="container">
+        <div class="section-head">
+          <div class="eyebrow">Portfolio</div>
+          <h2>A curated portfolio.</h2>
+          <p>This layout feels more high-end because it breaks away from a standard gallery grid. Use your strongest images here—ones with clean composition, emotional depth, and consistent color grading.</p>
+        </div>
+
+        <div class="portfolio-split">
+          <div class="portfolio-card tall" style="background-image:url('gallery-1.jpg');">
+            <div class="portfolio-content">
+              <span class="portfolio-kicker">Featured Story</span>
+              <h3 class="portfolio-title">Weddings with atmosphere, emotion, and timeless detail.</h3>
+              <p>Lead with one signature image that instantly sets the tone for the brand.</p>
+            </div>
+          </div>
+
+          <div class="portfolio-stack">
+            <div class="portfolio-card medium" style="background-image:url('gallery-2.jpg');">
+              <div class="portfolio-content">
+                <span class="portfolio-kicker">Editorial Detail</span>
+                <h3 class="portfolio-title">Elegant bridal details and refined styling.</h3>
+              </div>
+            </div>
+
+            <div class="portfolio-card" style="background-image:url('gallery-3.jpg'); min-height: 398px;">
+              <div class="portfolio-content">
+                <span class="portfolio-kicker">Portraiture</span>
+                <h3 class="portfolio-title">Portraits that feel both polished and deeply personal.</h3>
+              </div>
+            </div>
+
+            <div class="portfolio-card medium" style="background-image:url('gallery-4.jpg');">
+              <div class="portfolio-content">
+                <span class="portfolio-kicker">Celebration</span>
+                <h3 class="portfolio-title">Movement, joy, and the energy of the room.</h3>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section>
+      <div class="container">
+        <div class="video-block">
+          <div class="video-copy">
+            <div class="eyebrow">Featured film</div>
+            <h2 style="font-size:clamp(2.4rem,4vw,4rem);">Motion adds another layer.</h2>
+            <p>Use this space for your strongest highlight film or brand reel so visitors immediately understand the emotional value of having both photography and videography together.</p>
+            <a class="btn btn-secondary" href="#contact" style="width: fit-content; margin-top: 8px;">Ask About Video</a>
+          </div>
+          <div class="video-frame">
+            <iframe src="https://www.youtube.com/embed/YOUR_VIDEO_ID" title="1Shot Productions featured video" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="packages">
+      <div class="container">
+        <div class="section-head">
+          <div class="eyebrow">Packages</div>
+          <h2>Photography and videography packages.</h2>
+          <p>These package cards now feel cleaner, more upscale, and less template-like. You can change pricing and inclusions anytime.</p>
+        </div>
+
+        <div class="package-grid">
+          <article class="package">
+            <div class="package-media" style="background-image:url('package-1.jpg');"></div>
+            <div class="package-body">
+              <span class="tag">Essential</span>
+              <h3>The Keepsake</h3>
+              <div class="price">$2,200</div>
+              <p>A beautiful starting point for clients who want thoughtful, polished coverage.</p>
+              <ul>
+                <li>4 hours of photo + video coverage</li>
+                <li>1 photographer + 1 videographer</li>
+                <li>300+ edited images</li>
+                <li>3–4 minute highlight film</li>
+              </ul>
+              <a class="btn btn-primary" href="#contact">Book This Package</a>
+            </div>
+          </article>
+
+          <article class="package">
+            <div class="package-media" style="background-image:url('package-2.jpg');"></div>
+            <div class="package-body">
+              <span class="tag">Most Popular</span>
+              <h3>The Signature</h3>
+              <div class="price">$3,000</div>
+              <p>A balanced experience with enough room for the story, details, and emotional in-between moments.</p>
+              <ul>
+                <li>6 hours of photo + video coverage</li>
+                <li>1 photographer + 1 videographer</li>
+                <li>500+ edited images</li>
+                <li>5–7 minute highlight film</li>
+              </ul>
+              <a class="btn btn-primary" href="#contact">Book This Package</a>
+            </div>
+          </article>
+
+          <article class="package">
+            <div class="package-media" style="background-image:url('package-3.jpg');"></div>
+            <div class="package-body">
+              <span class="tag">Full Experience</span>
+              <h3>The Heirloom</h3>
+              <div class="price">$3,800</div>
+              <p>More time, more atmosphere, and a fuller story for clients who want the complete experience.</p>
+              <ul>
+                <li>8 hours of photo + video coverage</li>
+                <li>Second shooter option</li>
+                <li>700+ edited images</li>
+                <li>7–9 minute highlight film</li>
+              </ul>
+              <a class="btn btn-primary" href="#contact">Book This Package</a>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section>
+      <div class="container">
+        <div class="section-head">
+          <div class="eyebrow">Client Experience</div>
+          <h2>What clients can expect.</h2>
+          <p>This section feels more editorial when the testimonials are short, well-spaced, and emotionally specific.</p>
+        </div>
+
+        <div class="reviews-grid">
+          <div class="review">
+            <h3>"So easy to work with."</h3>
+            <p class="quote">They made everything feel smooth and natural, and we loved not having to coordinate separate photo and video teams.</p>
+            <p><strong>— Client Name</strong></p>
+          </div>
+          <div class="review">
+            <h3>"They captured the feel of the day."</h3>
+            <p class="quote">The photos were stunning, but the film is what took us right back into the emotion of it all.</p>
+            <p><strong>— Client Name</strong></p>
+          </div>
+          <div class="review">
+            <h3>"Professional and heartfelt."</h3>
+            <p class="quote">Everything felt polished, calm, and intentional from the first message to final delivery.</p>
+            <p><strong>— Client Name</strong></p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="contact">
+      <div class="container contact-grid">
+        <div class="contact-panel">
+          <div class="eyebrow">Contact</div>
+          <h2 style="font-size:clamp(2.4rem,4vw,4rem);">Inquire about availability and pricing.</h2>
+          <p>Use this section for your inquiry form, booking link, or email button. For GitHub Pages, Formspree is still the easiest way to make the contact form work without a backend.</p>
+
+          <div class="contact-list">
+            <div class="contact-item"><strong>Email:</strong> hello@1shotproductions.com</div>
+            <div class="contact-item"><strong>Serving:</strong> Houma, Thibodaux, New Orleans, Baton Rouge, and South Louisiana</div>
+            <div class="contact-item"><strong>Instagram:</strong> @1shotproductions</div>
+          </div>
+        </div>
+
+        <div class="contact-panel">
+          <form action="https://formspree.io/f/YOUR_FORM_ID" method="POST">
+            <input type="text" name="name" placeholder="Your name" required />
+            <input type="email" name="email" placeholder="Email address" required />
+            <input type="text" name="event_date" placeholder="Event date or preferred session timeframe" />
+            <select name="service">
+              <option value="">Select a service</option>
+              <option>Wedding Photo + Video</option>
+              <option>Photography Only</option>
+              <option>Videography Only</option>
+              <option>Couples / Engagement Session</option>
+              <option>Event Coverage</option>
+            </select>
+            <textarea name="message" placeholder="Tell us what you’re planning."></textarea>
+            <button class="btn btn-primary" type="submit">Send Inquiry</button>
+          </form>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <div class="container footer-wrap">
+      <div>© 2026 1Shot Productions. All rights reserved.</div>
+      <div>Designed for GitHub Pages • Keep images in the root folder</div>
+    </div>
+  </footer>
+</body>
+</html>
