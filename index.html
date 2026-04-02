@@ -250,13 +250,19 @@
     .hero-copy p,
     .hero-copy .eyebrow { color: rgba(255,255,255,.84); }
 
-    .hero-copy h1 {
+   .hero-copy h1 {
   font-size: clamp(3rem, 5vw, 4.8rem);
   max-width: 100%;
   margin-bottom: 18px;
   line-height: .95;
-  letter-spacing: 3px;
+  letter-spacing: 2px;
   white-space: nowrap;
+}
+
+.hero-divider {
+  display: inline-block;
+  margin: 0 26px;
+  opacity: .9;
 }
 
     .hero-copy .lead {
@@ -273,8 +279,8 @@
     }
 
 .hero-content-panel {
-  width: min(100%, 920px);
-  padding: 42px 40px 34px;
+  width: min(100%, 820px);
+  padding: 38px 40px 32px;
   border-radius: 26px;
   background: linear-gradient(180deg, rgba(255,255,255,.12), rgba(255,255,255,.08));
   border: 1px solid rgba(255,255,255,.18);
@@ -957,8 +963,8 @@
         <div class="hero-copy">
           <div class="hero-content-panel">
             <div class="eyebrow">South Louisiana</div>
-            <h1>PHOTO | FILM</h1>
-<p class="lead">Weddings • Events • Celebrations</p>
+            <h1>PHOTO <span class="hero-divider">|</span> FILM</h1>
+            <p class="lead">Weddings • Events • Celebrations</p>
             <div class="hero-actions">
               <a class="btn btn-primary" href="#contact">Inquire Now</a>
               <a class="btn btn-secondary" href="#work">View Portfolio</a>
@@ -970,8 +976,8 @@
           <div class="hero-photo" aria-label="Featured 1Shot Productions image"></div>
           <div class="hero-card">
             <div class="eyebrow">1 Shot Productions</div>
-            <h2>Seamless coverage for weddings and celebrations.</h2>
-            <p><bold>1 Shot Productions</bold> is a partnership between 1 Shot Photos and EP Productions, offering refined wedding and event photography alongside cinematic film coverage. By working together as one team, we ensure every moment is captured with consistency, professionalism, and attention to detail.</p>
+            <<h2>Seamless coverage for weddings and celebrations.</h2>
+            <p>1 Shot Productions brings photography and film together as one coordinated team for a smooth experience and a polished final result.</p>
             <a class="btn btn-outline" href="#teams" style="width: fit-content; margin-top: 8px;">Meet the Team</a>
           </div>
         </div>
