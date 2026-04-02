@@ -536,6 +536,48 @@
       max-width: 30ch;
       margin: 0;
     }
+    .reviews-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 24px;
+    }
+
+    .team-grid {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 34px;
+      margin-top: 20px;
+    }
+
+    .team-card {
+      background: #fff;
+      border: 1px solid var(--line);
+      border-radius: 18px;
+      padding: 26px;
+      text-align: center;
+      box-shadow: var(--shadow-soft);
+    }
+
+    .team-photo {
+      width: 90px;
+      height: 90px;
+      border-radius: 50%;
+      background-size: cover;
+      background-position: center;
+      margin: 0 auto 16px;
+      border: 4px solid #fff;
+      box-shadow: 0 6px 18px rgba(0,0,0,.12);
+    }
+
+    .team-card h3 {
+      margin-bottom: 8px;
+    }
+
+    .team-card p {
+      color: var(--muted);
+      font-size: .95rem;
+    }
+
     .reviews-grid { grid-template-columns: repeat(3, 1fr); }
     .package-grid { grid-template-columns: repeat(3, 1fr); align-items: stretch; }
     .contact-grid { grid-template-columns: 1fr 1fr; align-items: start; }
@@ -763,7 +805,7 @@
       inset: 0;
       background:
         linear-gradient(180deg, rgba(0,0,0,.08), rgba(0,0,0,.35)),
-        url('video-cover.jpeg') center/cover no-repeat;
+        url('video-cover.jpg') center/cover no-repeat;
       z-index: 0;
     }
 
@@ -1103,12 +1145,12 @@
       <div class="container hero-wrap">
         <div class="hero-copy">
           <div class="hero-content-panel">
-            <div class="eyebrow">South Louisiana photo + film</div>
-            <h1>Luxury photo and film for weddings and celebrations in South Louisiana.</h1>
-            <p class="lead"><strong>1Shot Productions</strong> is the collaboration of 1 Shot Photos and EP Productions, offering a refined, seamless photography and videography experience. One team, one aesthetic, and a polished final gallery and film that feel timeless, elegant, and true to your day.</p>
+            <div class="eyebrow">South Louisiana</div>
+            <h1>Photo and film for weddings, events, and celebrations.</h1>
+            <p class="lead">1Shot Productions brings photography and videography together as one team so your day is captured seamlessly and beautifully.</p>
             <div class="hero-actions">
-              <a class="btn btn-primary" href="#contact">Inquire Now</a>
-              <a class="btn btn-secondary" href="#packages">Explore Packages</a>
+              <a class="btn btn-primary" href="#contact">Inquire</a>
+              <a class="btn btn-secondary" href="#portfolio">View Work</a>
             </div>
           </div>
         </div>
@@ -1444,3 +1486,4 @@
   </script>
 </body>
 </html>
+
