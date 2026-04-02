@@ -48,7 +48,6 @@
       --accent-dark: #8f772f;
       --accent-soft: #f4eedc;
       --line: rgba(0,0,0,0.08);
-      --deep: #111111;
       --shadow: 0 20px 50px rgba(0,0,0,.06);
       --shadow-soft: 0 10px 30px rgba(0,0,0,.04);
       --radius: 22px;
@@ -210,7 +209,6 @@
     }
 
     .hero-copy,
-    .card,
     .package,
     .contact-panel {
       border-radius: var(--radius-lg);
@@ -313,70 +311,14 @@
       gap: 24px;
     }
 
-    .package-grid { grid-template-columns: repeat(3, 1fr); align-items: stretch; }
-    .contact-grid { grid-template-columns: 1fr 1fr; align-items: start; }
-
-    .portfolio-split {
-      display: grid;
-      grid-template-columns: .95fr 1.05fr;
-      gap: 28px;
+    .package-grid {
+      grid-template-columns: repeat(3, 1fr);
       align-items: stretch;
     }
 
-    .portfolio-stack {
-      display: grid;
-      gap: 24px;
-    }
-
-    .portfolio-card {
-      position: relative;
-      min-height: 680px;
-      border-radius: 34px;
-      overflow: hidden;
-      box-shadow: var(--shadow);
-      border: 1px solid var(--line);
-      background: #ddd center/cover no-repeat;
-    }
-
-    .portfolio-card.tall { min-height: 820px; }
-    .portfolio-card.medium { min-height: 398px; }
-
-    .portfolio-card::after {
-      content: "";
-      position: absolute;
-      inset: 0;
-      background: linear-gradient(180deg, rgba(9,8,8,.04), rgba(9,8,8,.52));
-    }
-
-    .portfolio-content {
-      position: absolute;
-      inset: auto 0 0 0;
-      z-index: 2;
-      padding: 28px 28px 24px;
-      color: white;
-    }
-
-    .portfolio-kicker {
-      display: inline-block;
-      font-size: .72rem;
-      letter-spacing: .18em;
-      text-transform: uppercase;
-      color: rgba(255,255,255,.72);
-      margin-bottom: 10px;
-      font-weight: 700;
-    }
-
-    .portfolio-title {
-      font-family: "Cormorant Garamond", Georgia, serif;
-      font-size: clamp(2rem, 3vw, 3.2rem);
-      line-height: .95;
-      margin: 0 0 10px;
-    }
-
-    .portfolio-card p {
-      color: rgba(255,255,255,.82);
-      max-width: 30ch;
-      margin: 0;
+    .contact-grid {
+      grid-template-columns: 1fr 1fr;
+      align-items: start;
     }
 
     .team-grid {
@@ -418,102 +360,103 @@
       margin: 0 auto;
     }
 
-    .card,
-    .contact-panel {
-      background: var(--paper);
-      backdrop-filter: blur(18px);
+    .featured-work {
+      padding-top: 88px;
     }
 
-    .card { padding: 32px; }
-    .card h3,
-    .package h3 { font-size: 1.95rem; }
-
-    .package {
-      padding: 0;
-      display: flex;
-      flex-direction: column;
-      background: var(--paper-solid);
+    .featured-work-head {
+      max-width: 820px;
+      margin-bottom: 42px;
     }
 
-    .package-media {
-      height: 270px;
-      background: #ddd center/cover no-repeat;
+    .featured-work-layout {
+      display: grid;
+      grid-template-columns: 1.08fr .92fr;
+      gap: 30px;
+      align-items: start;
+    }
+
+    .featured-photo-panel,
+    .featured-film-panel {
+      background: #fff;
+      border: 1px solid var(--line);
+      border-radius: 30px;
+      padding: 24px;
+      box-shadow: var(--shadow-soft);
+    }
+
+    .featured-photo-grid {
+      display: grid;
+      grid-template-columns: 1.15fr .85fr;
+      grid-template-rows: 270px 220px 220px;
+      gap: 18px;
+    }
+
+    .photo-main,
+    .photo-side-top,
+    .photo-side-bottom-left,
+    .photo-side-bottom-right {
       position: relative;
+      border-radius: 24px;
+      overflow: hidden;
+      background: #ddd center/cover no-repeat;
+      min-height: 220px;
     }
 
-    .package-media::after {
+    .photo-main {
+      grid-row: 1 / span 3;
+      min-height: 100%;
+    }
+
+    .photo-side-top::after,
+    .photo-side-bottom-left::after,
+    .photo-side-bottom-right::after,
+    .photo-main::after {
       content: "";
       position: absolute;
       inset: 0;
-      background: linear-gradient(180deg, rgba(0,0,0,.02), rgba(0,0,0,.12));
+      background: linear-gradient(180deg, rgba(0,0,0,.04), rgba(0,0,0,.28));
     }
 
-    .package-body {
-      padding: 32px;
-      display: flex;
-      flex-direction: column;
-      gap: 12px;
-      flex: 1;
+    .portfolio-content {
+      position: absolute;
+      inset: auto 0 0 0;
+      z-index: 2;
+      padding: 24px;
+      color: white;
     }
 
-    .price {
-      font-size: 2.35rem;
-      font-family: "Cormorant Garamond", Georgia, serif;
-      color: var(--ink);
-      margin: 6px 0;
-      line-height: 1;
-    }
-
-    .tag {
-      display: inline-flex;
-      padding: 8px 13px;
-      border-radius: 999px;
-      background: rgba(182,154,69,.12);
-      color: var(--accent-dark);
-      font-size: .78rem;
-      font-weight: 700;
-      letter-spacing: .12em;
+    .portfolio-kicker {
+      display: inline-block;
+      font-size: .72rem;
+      letter-spacing: .18em;
       text-transform: uppercase;
-      width: fit-content;
+      color: rgba(255,255,255,.72);
+      margin-bottom: 10px;
+      font-weight: 700;
     }
 
-    .package ul {
-      padding-left: 18px;
-      margin: 0 0 10px;
-      color: var(--muted);
+    .portfolio-title {
+      font-family: "Cormorant Garamond", Georgia, serif;
+      font-size: clamp(2rem, 3vw, 3.2rem);
+      line-height: .95;
+      margin: 0;
     }
 
-    .package li { margin-bottom: 8px; }
-
-    .video-block {
+    .featured-film-panel {
       display: grid;
-      grid-template-columns: .82fr 1.18fr;
-      gap: 28px;
-      align-items: center;
-      background: #f7f4ef;
-      color: var(--ink);
-      border-radius: 32px;
-      overflow: hidden;
-      box-shadow: var(--shadow-soft);
-      border: 1px solid rgba(0,0,0,.06);
-      padding: 34px;
-      position: relative;
+      gap: 22px;
+      background: #f8f5ef;
     }
 
-    .video-copy {
-      padding: 6px;
+    .film-panel-copy h3 {
+      font-size: clamp(2rem, 3vw, 2.8rem);
+      margin-bottom: 12px;
     }
 
-    .video-feature-meta {
-      display: flex;
-      flex-wrap: wrap;
-      gap: 10px;
-      margin: 20px 0 8px;
-    }
-
-    .video-feature-meta .btn {
-      padding: 12px 18px;
-      font-size: .9rem;
+    .film-panel-copy p {
+      max-width: 34ch;
+      margin-bottom: 0;
     }
 
     .video-frame {
@@ -524,7 +467,7 @@
       flex-direction: column;
       align-items: stretch;
       justify-content: center;
-      gap: 14px;
+      gap: 12px;
       z-index: 1;
     }
 
@@ -716,7 +659,75 @@
       font-weight: 600;
     }
 
-    .contact-panel { padding: 36px; }
+    .featured-links {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 12px;
+      margin-top: 4px;
+    }
+
+    .package {
+      padding: 0;
+      display: flex;
+      flex-direction: column;
+      background: var(--paper-solid);
+    }
+
+    .package-media {
+      height: 270px;
+      background: #ddd center/cover no-repeat;
+      position: relative;
+    }
+
+    .package-media::after {
+      content: "";
+      position: absolute;
+      inset: 0;
+      background: linear-gradient(180deg, rgba(0,0,0,.02), rgba(0,0,0,.12));
+    }
+
+    .package-body {
+      padding: 32px;
+      display: flex;
+      flex-direction: column;
+      gap: 12px;
+      flex: 1;
+    }
+
+    .price {
+      font-size: 2.35rem;
+      font-family: "Cormorant Garamond", Georgia, serif;
+      color: var(--ink);
+      margin: 6px 0;
+      line-height: 1;
+    }
+
+    .tag {
+      display: inline-flex;
+      padding: 8px 13px;
+      border-radius: 999px;
+      background: rgba(182,154,69,.12);
+      color: var(--accent-dark);
+      font-size: .78rem;
+      font-weight: 700;
+      letter-spacing: .12em;
+      text-transform: uppercase;
+      width: fit-content;
+    }
+
+    .package ul {
+      padding-left: 18px;
+      margin: 0 0 10px;
+      color: var(--muted);
+    }
+
+    .package li { margin-bottom: 8px; }
+
+    .contact-panel {
+      background: var(--paper);
+      backdrop-filter: blur(18px);
+      padding: 36px;
+    }
 
     .contact-list {
       display: grid;
@@ -774,19 +785,27 @@
     }
 
     @media (max-width: 1100px) {
-      .video-block,
+      .featured-work-layout,
       .contact-grid,
-      .portfolio-split,
       .team-grid {
         grid-template-columns: 1fr;
       }
 
+      .featured-photo-grid {
+        grid-template-columns: 1fr 1fr;
+        grid-template-rows: 320px 220px 220px;
+      }
+
+      .photo-main {
+        grid-column: 1 / -1;
+        grid-row: auto;
+        min-height: 320px;
+      }
+
       .hero-copy { min-height: 620px; }
-      .portfolio-card,
-      .portfolio-card.tall { min-height: 620px; }
-      .portfolio-card.medium { min-height: 300px; }
       .video-bottom { max-width: 82%; }
       .video-carousel { grid-template-columns: 1fr; }
+      .package-grid { grid-template-columns: 1fr; }
     }
 
     @media (max-width: 760px) {
@@ -815,9 +834,7 @@
         padding: 18px 16px 22px;
       }
 
-      .video-block,
       .contact-grid,
-      .portfolio-split,
       .team-grid,
       .package-grid {
         grid-template-columns: 1fr;
@@ -862,23 +879,29 @@
         margin-top: 16px;
       }
 
-      .hero-actions .btn {
+      .hero-actions .btn,
+      .featured-links .btn {
         width: 100%;
       }
 
-      .portfolio-card,
-      .portfolio-card.tall,
-      .portfolio-card.medium {
-        min-height: 340px;
-      }
-
-      .portfolio-content {
-        padding: 18px;
-      }
-
-      .video-block {
+      .featured-photo-panel,
+      .featured-film-panel {
         padding: 16px;
-        gap: 16px;
+        border-radius: 24px;
+      }
+
+      .featured-photo-grid {
+        grid-template-columns: 1fr;
+        grid-template-rows: 320px 220px 220px 220px;
+        gap: 14px;
+      }
+
+      .photo-main,
+      .photo-side-top,
+      .photo-side-bottom-left,
+      .photo-side-bottom-right {
+        grid-column: auto;
+        grid-row: auto;
       }
 
       .video-overlay {
@@ -911,6 +934,10 @@
         padding: 20px;
       }
 
+      .featured-links {
+        flex-direction: column;
+      }
+
       section {
         padding: 56px 0;
       }
@@ -930,7 +957,7 @@
       <nav>
         <ul>
           <li><a href="#home">Home</a></li>
-          <li><a href="#teams">Team</a></li>
+          <li><a href="#teams">About</a></li>
           <li><a href="#packages">Packages</a></li>
           <li><a href="#contact">Contact</a></li>
         </ul>
@@ -990,93 +1017,91 @@
       </div>
     </section>
 
-    <section id="work">
+    <section id="work" class="featured-work">
       <div class="container">
-        <div class="section-head">
-          <div class="eyebrow">Photography — 1Shot Photos</div>
-          <h2>Wedding and event photography.</h2>
-          <p>Clean composition, natural moments, and imagery that feels polished without feeling forced.</p>
+        <div class="section-head featured-work-head">
+          <div class="eyebrow">Featured Work</div>
+          <h2>One story, captured in photo and film.</h2>
+          <p>
+            We approach weddings and celebrations as one shared visual story — blending timeless photography
+            with cinematic film so everything feels cohesive, emotional, and true to the day.
+          </p>
         </div>
 
-        <div class="portfolio-split">
-          <div class="portfolio-card tall" style="background-image:url('gallery-1.jpg');">
-            <div class="portfolio-content">
-              <span class="portfolio-kicker">Featured Image</span>
-            </div>
-          </div>
-
-          <div class="portfolio-stack">
-            <div class="portfolio-card medium" style="background-image:url('gallery-2.jpg');">
-              <div class="portfolio-content"></div>
-            </div>
-
-            <div class="portfolio-card" style="background-image:url('gallery-3.jpg'); min-height: 398px;">
-              <div class="portfolio-content"></div>
-            </div>
-
-            <div class="portfolio-card medium" style="background-image:url('gallery-4.jpg');">
-              <div class="portfolio-content"></div>
-            </div>
-
-            <div style="margin-top:18px; display:flex; gap:12px; flex-wrap:wrap;">
-              <a class="btn btn-outline" href="https://instagram.com/YOUR_PHOTO_INSTAGRAM" target="_blank" rel="noopener noreferrer">Instagram</a>
-              <a class="btn btn-primary" href="https://linktr.ee/YOUR_PHOTO_LINKTREE" target="_blank" rel="noopener noreferrer">Full Portfolio</a>
-            </div>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <section id="film">
-      <div class="container">
-        <div class="video-block">
-          <div class="video-copy">
-            <div class="eyebrow">Film — EP Productions</div>
-            <h2>Featured wedding and event films.</h2>
-            <p>Cinematic wedding and event films that let you relive the day.</p>
-            <div class="video-feature-meta">
-              <a class="btn btn-outline" href="https://instagram.com/YOUR_VIDEO_INSTAGRAM" target="_blank" rel="noopener noreferrer">Instagram</a>
-              <a class="btn btn-primary" href="https://linktr.ee/YOUR_VIDEO_LINKTREE" target="_blank" rel="noopener noreferrer">Watch More Films</a>
-            </div>
-          </div>
-
-          <div class="video-frame">
-            <div class="video-cinematic-card" id="featuredVideoCard">
-              <iframe id="featuredVideoFrame" src="https://www.youtube.com/embed/YOUR_VIDEO_ID?enablejsapi=1&rel=0&modestbranding=1&playsinline=1" title="1Shot Productions featured video" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
-              <div class="video-overlay">
-                <button class="video-play" type="button" aria-label="Play featured film" onclick="playFeaturedVideo()"></button>
-                <div class="video-bottom">
-                  <span class="video-label" id="videoLabel">EP Productions</span>
-                  <h3 class="video-title" id="videoTitle">A cinematic look at the day.</h3>
-                  <p class="video-subtitle" id="videoSubtitle">A Day to Remember</p>
+        <div class="featured-work-layout">
+          <div class="featured-photo-panel">
+            <div class="featured-photo-grid">
+              <div class="photo-main" style="background-image:url('gallery-1.jpg');">
+                <div class="portfolio-content">
+                  <span class="portfolio-kicker">Photography</span>
+                  <h3 class="portfolio-title">Moments that feel natural and lasting.</h3>
                 </div>
+              </div>
+
+              <div class="photo-side-top" style="background-image:url('gallery-2.jpg');"></div>
+              <div class="photo-side-bottom-left" style="background-image:url('gallery-3.jpg');"></div>
+              <div class="photo-side-bottom-right" style="background-image:url('gallery-4.jpg');"></div>
+            </div>
+
+            <div class="featured-links">
+              <a class="btn btn-outline" href="https://instagram.com/YOUR_PHOTO_INSTAGRAM" target="_blank" rel="noopener noreferrer">Photo Instagram</a>
+              <a class="btn btn-primary" href="https://linktr.ee/YOUR_PHOTO_LINKTREE" target="_blank" rel="noopener noreferrer">View Full Gallery</a>
+            </div>
+          </div>
+
+          <div class="featured-film-panel">
+            <div class="film-panel-copy">
+              <div class="eyebrow">Film</div>
+              <h3>Wedding films that let you relive the day.</h3>
+              <p>
+                Movement, sound, atmosphere, and emotion — captured in a way that feels polished,
+                cinematic, and deeply personal.
+              </p>
+            </div>
+
+            <div class="video-frame">
+              <div class="video-cinematic-card" id="featuredVideoCard">
+                <iframe id="featuredVideoFrame" src="https://www.youtube.com/embed/YOUR_VIDEO_ID?enablejsapi=1&rel=0&modestbranding=1&playsinline=1" title="1Shot Productions featured video" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+                <div class="video-overlay">
+                  <button class="video-play" type="button" aria-label="Play featured film" onclick="playFeaturedVideo()"></button>
+                  <div class="video-bottom">
+                    <span class="video-label" id="videoLabel">EP Productions</span>
+                    <h3 class="video-title" id="videoTitle">A cinematic look at the day.</h3>
+                    <p class="video-subtitle" id="videoSubtitle">A Day to Remember</p>
+                  </div>
+                </div>
+              </div>
+
+              <div class="video-carousel" aria-label="Film carousel">
+                <button class="video-thumb active" type="button" onclick="selectVideo({ id: 'YOUR_VIDEO_ID', cover: 'video-cover.jpeg', label: 'EP Productions', title: 'A cinematic look at the day.', subtitle: 'A Day to Remember' }, 0)">
+                  <div class="video-thumb-image" style="background-image:url('video-cover.jpeg');"></div>
+                  <div class="video-thumb-body">
+                    <span class="video-thumb-label">Featured Film</span>
+                    <span class="video-thumb-title">A Day to Remember</span>
+                  </div>
+                </button>
+
+                <button class="video-thumb" type="button" onclick="selectVideo({ id: 'VIDEO_ID_2', cover: 'video-cover-2.jpg', label: 'EP Productions', title: 'Wedding highlight film.', subtitle: 'Ceremony + Portrait Highlights' }, 1)">
+                  <div class="video-thumb-image" style="background-image:url('video-cover-2.jpg');"></div>
+                  <div class="video-thumb-body">
+                    <span class="video-thumb-label">Wedding Highlight</span>
+                    <span class="video-thumb-title">Ceremony + Portrait Highlights</span>
+                  </div>
+                </button>
+
+                <button class="video-thumb" type="button" onclick="selectVideo({ id: 'VIDEO_ID_3', cover: 'video-cover-3.jpg', label: 'EP Productions', title: 'Celebration film feature.', subtitle: 'Reception + Event Moments' }, 2)">
+                  <div class="video-thumb-image" style="background-image:url('video-cover-3.jpg');"></div>
+                  <div class="video-thumb-body">
+                    <span class="video-thumb-label">Celebration Film</span>
+                    <span class="video-thumb-title">Reception + Event Moments</span>
+                  </div>
+                </button>
               </div>
             </div>
 
-            <div class="video-carousel" aria-label="Film carousel">
-              <button class="video-thumb active" type="button" onclick="selectVideo({ id: 'YOUR_VIDEO_ID', cover: 'video-cover.jpeg', label: 'EP Productions', title: 'A cinematic look at the day.', subtitle: 'A Day to Remember' }, 0)">
-                <div class="video-thumb-image" style="background-image:url('video-cover.jpeg');"></div>
-                <div class="video-thumb-body">
-                  <span class="video-thumb-label">Featured Film</span>
-                  <span class="video-thumb-title">A Day to Remember</span>
-                </div>
-              </button>
-
-              <button class="video-thumb" type="button" onclick="selectVideo({ id: 'VIDEO_ID_2', cover: 'video-cover-2.jpg', label: 'EP Productions', title: 'Wedding highlight film.', subtitle: 'Ceremony + Portrait Highlights' }, 1)">
-                <div class="video-thumb-image" style="background-image:url('video-cover-2.jpg');"></div>
-                <div class="video-thumb-body">
-                  <span class="video-thumb-label">Wedding Highlight</span>
-                  <span class="video-thumb-title">Ceremony + Portrait Highlights</span>
-                </div>
-              </button>
-
-              <button class="video-thumb" type="button" onclick="selectVideo({ id: 'VIDEO_ID_3', cover: 'video-cover-3.jpg', label: 'EP Productions', title: 'Celebration film feature.', subtitle: 'Reception + Event Moments' }, 2)">
-                <div class="video-thumb-image" style="background-image:url('video-cover-3.jpg');"></div>
-                <div class="video-thumb-body">
-                  <span class="video-thumb-label">Celebration Film</span>
-                  <span class="video-thumb-title">Reception + Event Moments</span>
-                </div>
-              </button>
+            <div class="featured-links">
+              <a class="btn btn-outline" href="https://instagram.com/YOUR_VIDEO_INSTAGRAM" target="_blank" rel="noopener noreferrer">Film Instagram</a>
+              <a class="btn btn-primary" href="https://linktr.ee/YOUR_VIDEO_LINKTREE" target="_blank" rel="noopener noreferrer">Watch More Films</a>
             </div>
           </div>
         </div>
