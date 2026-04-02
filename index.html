@@ -860,81 +860,153 @@
       .video-carousel { grid-template-columns: 1fr; }
     }
 
-    @media (max-width: 760px) {
-      .menu-toggle { display: block; }
-      nav {
-        position: absolute;
-        top: 82px;
-        left: 0;
-        right: 0;
-        background: rgba(255,255,255,.98);
-        border-bottom: 1px solid var(--line);
-        display: none;
-      }
+   @media (max-width: 760px) {
+  .menu-toggle { 
+    display: block; 
+  }
 
-      nav.open { display: block; }
+  nav {
+    position: absolute;
+    top: 82px;
+    left: 0;
+    right: 0;
+    background: rgba(255,255,255,.98);
+    border-bottom: 1px solid var(--line);
+    display: none;
+  }
 
-      nav ul {
-        flex-direction: column;
-        align-items: flex-start;
-        gap: 16px;
-        padding: 18px 16px 22px;
-      }
+  nav.open { 
+    display: block; 
+  }
 
-      .hero-wrap,
-      .video-block,
-      .contact-grid,
-      .why-grid,
-      .package-grid,
-      .portfolio-split,
-      .team-grid {
-        grid-template-columns: 1fr;
-      }
+  nav ul {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 16px;
+    padding: 18px 16px 22px;
+  }
 
-      .hero-copy {
-        padding: 20px;
-        min-height: 620px;
-        align-items: stretch;
-      }
+  /* Layout stacks */
+  .hero-wrap,
+  .video-block,
+  .contact-grid,
+  .why-grid,
+  .package-grid,
+  .portfolio-split,
+  .team-grid {
+    grid-template-columns: 1fr;
+  }
 
-      .hero-content-panel {
-        margin-top: auto;
-        padding: 24px 20px 20px;
-        border-radius: 22px;
-      }
+  /* HERO SECTION */
+  .hero-copy {
+    padding: 14px;
+    min-height: 540px;
+    align-items: flex-end;
+  }
 
-      .hero-copy h1 {
-        font-size: clamp(2.35rem, 10vw, 3.4rem);
-        max-width: 8ch;
-      }
+  .hero-content-panel {
+    width: 100%;
+    max-width: 100%;
+    padding: 20px 16px 16px;
+    border-radius: 20px;
+  }
 
-      .hero-copy .lead { font-size: .98rem; }
-      .hero-card,
-      .contact-panel,
-      .card,
-      .package-body { padding: 24px; }
+  .hero-copy h1 {
+    font-size: clamp(2.1rem, 9vw, 2.8rem);
+    max-width: 100%;
+    white-space: normal;
+    line-height: 1;
+    letter-spacing: 1px;
+    margin-bottom: 10px;
+  }
 
-      .video-block {
-        padding: 18px;
-        gap: 18px;
-      }
+  .hero-divider {
+    display: block;
+    margin: 2px 0;
+  }
 
-      .video-overlay { padding: 18px; }
-      .video-bottom { max-width: 100%; }
-      .video-play {
-        width: 66px;
-        height: 66px;
-      }
-      .video-title { font-size: 1.8rem; }
-      .video-thumb-image { height: 88px; }
+  .hero-copy .lead {
+    font-size: .95rem;
+    max-width: 100%;
+  }
 
-      section { padding: 68px 0; }
-      .portfolio-card,
-      .portfolio-card.tall,
-      .portfolio-card.medium { min-height: 420px; }
-      .portfolio-content { padding: 22px 22px 20px; }
-    }
-  </style>
+  .hero-actions {
+    flex-direction: column;
+    align-items: stretch;
+    gap: 10px;
+    margin-top: 16px;
+  }
+
+  .hero-actions .btn {
+    width: 100%;
+  }
+
+  /* Right hero card */
+  .hero-photo {
+    min-height: 240px;
+  }
+
+  .hero-card {
+    padding: 22px;
+  }
+
+  .hero-card h2 {
+    font-size: clamp(1.7rem, 7vw, 2.2rem);
+  }
+
+  .hero-card p {
+    font-size: .95rem;
+  }
+
+  /* Portfolio */
+  .portfolio-card,
+  .portfolio-card.tall,
+  .portfolio-card.medium {
+    min-height: 340px;
+  }
+
+  .portfolio-content {
+    padding: 18px;
+  }
+
+  /* Video */
+  .video-block {
+    padding: 16px;
+    gap: 16px;
+  }
+
+  .video-overlay {
+    padding: 16px;
+  }
+
+  .video-play {
+    width: 60px;
+    height: 60px;
+  }
+
+  .video-title {
+    font-size: 1.6rem;
+  }
+
+  .video-carousel {
+    grid-template-columns: 1fr;
+  }
+
+  .video-thumb-image {
+    height: 80px;
+  }
+
+  /* General spacing */
+  .card,
+  .package-body,
+  .contact-panel {
+    padding: 20px;
+  }
+
+  section {
+    padding: 56px 0;
+  }
+}
 </head>
 <body>
   <header>
@@ -963,7 +1035,7 @@
         <div class="hero-copy">
           <div class="hero-content-panel">
             <div class="eyebrow">South Louisiana</div>
-            <h1>PHOTO <span class="hero-divider">|</span> FILM</h1>
+            <h1>PHOTO<br><span class="hero-divider">|</span><br>FILM</h1>
             <p class="lead">Weddings • Events • Celebrations</p>
             <div class="hero-actions">
               <a class="btn btn-primary" href="#contact">Inquire Now</a>
