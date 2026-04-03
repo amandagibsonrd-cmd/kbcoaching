@@ -666,6 +666,71 @@
       margin-top: 4px;
     }
 
+    .testimonials-section {
+  padding-top: 40px;
+}
+
+.testimonials-head {
+  max-width: 760px;
+  margin-bottom: 34px;
+}
+
+.testimonials-grid {
+  display: grid;
+  grid-template-columns: 1.2fr .9fr .9fr;
+  gap: 24px;
+}
+
+.testimonial-card {
+  background: #fff;
+  border: 1px solid var(--line);
+  border-radius: 28px;
+  padding: 30px 28px;
+  box-shadow: var(--shadow-soft);
+}
+
+.featured-testimonial {
+  background: #f8f5ef;
+}
+
+.testimonial-stars {
+  font-size: .95rem;
+  letter-spacing: .18em;
+  color: var(--accent-dark);
+  margin-bottom: 18px;
+}
+
+.testimonial-quote {
+  font-family: "Cormorant Garamond", Georgia, serif;
+  font-size: clamp(1.5rem, 2.3vw, 2.1rem);
+  line-height: 1.08;
+  color: var(--ink);
+  margin: 0 0 20px;
+}
+
+.testimonial-name {
+  font-size: .92rem;
+  color: var(--muted);
+  font-weight: 600;
+}
+
+@media (max-width: 1100px) {
+  .testimonials-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 760px) {
+  .testimonial-card {
+    padding: 22px 20px;
+    border-radius: 22px;
+  }
+
+  .testimonial-quote {
+    font-size: 1.5rem;
+  }
+
+
     .package {
       padding: 0;
       display: flex;
@@ -1107,7 +1172,47 @@
         </div>
       </div>
     </section>
+<section id="testimonials" class="testimonials-section">
+  <div class="container">
+    <div class="section-head testimonials-head">
+      <div class="eyebrow">Kind Words</div>
+      <h2>What couples remember most.</h2>
+      <p>
+        Thoughtful coverage, calm communication, and final images and films that let the day live on.
+      </p>
+    </div>
 
+    <div class="testimonials-grid">
+      <article class="testimonial-card featured-testimonial">
+        <div class="testimonial-stars">★★★★★</div>
+        <p class="testimonial-quote">
+          “Working with 1Shot Productions felt easy from start to finish. They captured the big moments,
+          the quiet in-between moments, and everything felt so natural. Looking back through everything,
+          it truly feels like our day.”
+        </p>
+        <div class="testimonial-name">— Bride & Groom</div>
+      </article>
+
+      <article class="testimonial-card">
+        <div class="testimonial-stars">★★★★★</div>
+        <p class="testimonial-quote">
+          “The photos were beautiful, and the film brought back the feeling of the day in a way we didn’t
+          expect. We are so thankful to have those memories preserved.”
+        </p>
+        <div class="testimonial-name">— Wedding Client</div>
+      </article>
+
+      <article class="testimonial-card">
+        <div class="testimonial-stars">★★★★★</div>
+        <p class="testimonial-quote">
+          “Professional, calm, and easy to work with. Having photo and video together made everything feel
+          seamless, and the final result felt polished and true to us.”
+        </p>
+        <div class="testimonial-name">— Event Client</div>
+      </article>
+    </div>
+  </div>
+</section>
     <section id="packages">
       <div class="container">
         <div class="section-head">
