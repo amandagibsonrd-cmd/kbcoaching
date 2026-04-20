@@ -3,12 +3,12 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>1Shot Productions | South Louisiana Photo + Video</title>
-  <meta name="description" content="Luxury wedding photography and videography in South Louisiana. 1Shot Productions offers wedding photo and video packages in Houma, Thibodaux, New Orleans, Baton Rouge, and surrounding areas." />
-  <meta name="keywords" content="South Louisiana wedding photographer, South Louisiana wedding videographer, Houma wedding photographer, Thibodaux wedding photographer, New Orleans wedding videographer, Baton Rouge wedding photographer, Louisiana wedding photo video package, 1Shot Productions" />
+  <title>1Shot Productions | South Louisiana Photo + Film</title>
+  <meta name="description" content="Luxury wedding, event, and festival photography and videography in South Louisiana. 1Shot Productions offers seamless photo and film coverage in Houma, Thibodaux, New Orleans, Baton Rouge, and surrounding areas." />
+  <meta name="keywords" content="South Louisiana wedding photographer, South Louisiana wedding videographer, event photographer Louisiana, festival videographer Louisiana, Houma wedding photographer, Thibodaux wedding photographer, New Orleans wedding videographer, Baton Rouge wedding photographer, 1Shot Productions, 1ShotPhotos" />
   <meta name="author" content="1Shot Productions" />
-  <meta property="og:title" content="1Shot Productions | Luxury Wedding Photo + Video in South Louisiana" />
-  <meta property="og:description" content="Luxury wedding photography and videography serving South Louisiana including Houma, Thibodaux, New Orleans, and Baton Rouge." />
+  <meta property="og:title" content="1Shot Productions | Luxury Wedding Photo + Film in South Louisiana" />
+  <meta property="og:description" content="Luxury wedding, event, and festival photography and videography serving South Louisiana including Houma, Thibodaux, New Orleans, and Baton Rouge." />
   <meta property="og:type" content="website" />
   <meta property="og:image" content="hero.jpg" />
   <meta property="og:url" content="https://yourgithubusername.github.io/1shotproductions/" />
@@ -28,7 +28,7 @@
     "url": "https://yourgithubusername.github.io/1shotproductions/",
     "email": "hello@1shotproductions.com",
     "areaServed": ["Houma LA", "Thibodaux LA", "New Orleans LA", "Baton Rouge LA", "South Louisiana"],
-    "service": ["Wedding Photography", "Wedding Videography", "Event Photography", "Event Videography"],
+    "service": ["Wedding Photography", "Wedding Videography", "Event Photography", "Event Videography", "Festival Photography", "Festival Videography"],
     "priceRange": "$$"
   }
   </script>
@@ -273,7 +273,7 @@
     }
 
     .hero-copy .lead {
-      max-width: 56ch;
+      max-width: 58ch;
       font-size: 1.03rem;
       margin-bottom: 0;
     }
@@ -286,7 +286,7 @@
     }
 
     .hero-content-panel {
-      width: min(100%, 820px);
+      width: min(100%, 860px);
       padding: 38px 40px 32px;
       border-radius: 26px;
       background: linear-gradient(180deg, rgba(255,255,255,.12), rgba(255,255,255,.08));
@@ -740,38 +740,39 @@
 
     .testimonial-track {
       display: flex;
-      transition: transform .45s ease;
+      transition: transform .7s cubic-bezier(.22,1,.36,1);
       will-change: transform;
     }
 
     .testimonial-slide {
       min-width: 100%;
       flex: 0 0 100%;
-      padding: 4px 0;
+      padding: 8px 0;
     }
 
     .testimonial-card {
-      background: #fff;
+      background: linear-gradient(180deg, #ffffff 0%, #fcfaf5 100%);
       border: 1px solid var(--line);
       border-radius: 28px;
-      padding: 34px 30px;
-      box-shadow: 0 14px 34px rgba(0,0,0,.05);
+      padding: 38px 34px;
+      box-shadow: 0 18px 40px rgba(0,0,0,.06);
       max-width: 920px;
       margin: 0 auto;
       text-align: center;
       transition:
-        transform .35s ease,
-        box-shadow .35s ease,
-        border-color .35s ease;
+        transform .45s ease,
+        box-shadow .45s ease,
+        border-color .45s ease;
     }
 
     .testimonial-card:hover {
-      transform: translateY(-4px);
-      box-shadow: 0 24px 50px rgba(0,0,0,.09);
+      transform: translateY(-5px);
+      box-shadow: 0 28px 55px rgba(0,0,0,.10);
+      border-color: rgba(182,154,69,.22);
     }
 
     .featured-testimonial {
-      background: #f8f5ef;
+      background: linear-gradient(180deg, #f8f5ef 0%, #fcfaf6 100%);
     }
 
     .testimonial-avatar {
@@ -783,11 +784,11 @@
       margin: 0 auto 18px;
       border: 4px solid #fff;
       box-shadow: 0 10px 24px rgba(0,0,0,.10);
-      transition: transform .6s ease;
+      transition: transform .7s ease;
     }
 
     .testimonial-card:hover .testimonial-avatar {
-      transform: scale(1.03);
+      transform: scale(1.04);
     }
 
     .testimonial-stars {
@@ -799,7 +800,7 @@
 
     .testimonial-quote {
       font-family: "Cormorant Garamond", Georgia, serif;
-      font-size: clamp(1.6rem, 2.4vw, 2.3rem);
+      font-size: clamp(1.7rem, 2.5vw, 2.45rem);
       line-height: 1.08;
       color: var(--ink);
       margin: 0 0 18px;
@@ -831,18 +832,19 @@
       height: 46px;
       border-radius: 50%;
       border: 1px solid var(--line);
-      background: #fff;
+      background: rgba(255,255,255,.92);
       color: var(--ink);
       font-size: 1.1rem;
       cursor: pointer;
       box-shadow: var(--shadow-soft);
-      transition: transform .2s ease, border-color .2s ease, background .2s ease;
+      transition: transform .25s ease, border-color .25s ease, background .25s ease, box-shadow .25s ease;
     }
 
     .testimonial-arrow:hover {
       transform: translateY(-1px);
       border-color: rgba(182,154,69,.36);
       background: #fdfaf2;
+      box-shadow: 0 16px 28px rgba(0,0,0,.08);
     }
 
     .testimonial-dots {
@@ -858,12 +860,33 @@
       border: 0;
       background: rgba(0,0,0,.18);
       cursor: pointer;
-      transition: transform .2s ease, background .2s ease;
+      transition: transform .25s ease, background .25s ease, opacity .25s ease;
     }
 
     .testimonial-dot.active {
       background: var(--accent-dark);
-      transform: scale(1.15);
+      transform: scale(1.18);
+    }
+
+    .testimonial-carousel::before,
+    .testimonial-carousel::after {
+      content: "";
+      position: absolute;
+      top: 0;
+      bottom: 0;
+      width: 72px;
+      z-index: 2;
+      pointer-events: none;
+    }
+
+    .testimonial-carousel::before {
+      left: 0;
+      background: linear-gradient(90deg, rgba(255,255,255,1), rgba(255,255,255,0));
+    }
+
+    .testimonial-carousel::after {
+      right: 0;
+      background: linear-gradient(270deg, rgba(255,255,255,1), rgba(255,255,255,0));
     }
 
     .package {
@@ -882,26 +905,8 @@
       box-shadow: 0 24px 50px rgba(0,0,0,.09);
     }
 
-    .package-media {
-      height: 270px;
-      background: #ddd center/cover no-repeat;
-      position: relative;
-      transition: transform .6s ease;
-    }
-
-    .package:hover .package-media {
-      transform: scale(1.03);
-    }
-
-    .package-media::after {
-      content: "";
-      position: absolute;
-      inset: 0;
-      background: linear-gradient(180deg, rgba(0,0,0,.02), rgba(0,0,0,.12));
-    }
-
     .package-body {
-      padding: 32px;
+      padding: 34px 32px;
       display: flex;
       flex-direction: column;
       gap: 12px;
@@ -936,6 +941,15 @@
     }
 
     .package li { margin-bottom: 8px; }
+
+    .packages-note {
+      margin-top: 22px;
+      padding: 22px 24px;
+      border-radius: 22px;
+      border: 1px solid var(--line);
+      background: linear-gradient(180deg, #fff 0%, #fcfaf5 100%);
+      box-shadow: 0 14px 34px rgba(0,0,0,.05);
+    }
 
     .contact-panel {
       background: var(--paper);
@@ -1252,10 +1266,10 @@
           <div class="hero-content-panel">
             <div class="eyebrow">South Louisiana</div>
             <h1><span>PHOTO</span><span class="hero-divider">|</span><span>FILM</span></h1>
-            <p class="lead">Weddings • Events • Celebrations</p>
+            <p class="lead">Weddings • Events • Festivals • Celebrations</p>
             <div class="hero-actions">
               <a class="btn btn-primary" href="#contact">Inquire Now</a>
-              <a class="btn btn-secondary" href="#teams">About the Team</a>
+              <a class="btn btn-secondary" href="https://linktr.ee/1shotpro.la" target="_blank" rel="noopener noreferrer">View More Work</a>
             </div>
           </div>
         </div>
@@ -1268,18 +1282,18 @@
           <div class="eyebrow">About 1Shot Productions</div>
           <h2>One team for photo and film.</h2>
           <p>
-            1 Shot Productions brings photography and videography together as one coordinated experience.
-            Instead of hiring separate teams, couples get a seamless approach — with visuals that feel cohesive,
-            communication that stays simple, and coverage designed to preserve both the look and the feeling of the day.
+            1Shot Productions brings photography and videography together as one coordinated experience.
+            Instead of hiring separate teams, couples and clients get a seamless approach — with visuals that feel cohesive,
+            communication that stays simple, and coverage designed to preserve both the look and the feeling of the moment.
           </p>
         </div>
 
         <div class="team-grid">
           <div class="team-card">
             <div class="team-photo" style="background-image:url('1shot-headshot.png');"></div>
-            <h3>1 Shot Photos</h3>
+            <h3>1ShotPhotos</h3>
             <p>
-              Clean, timeless photography focused on genuine moments. From weddings to celebrations,
+              Clean, timeless photography focused on genuine moments. From weddings to events and festivals,
               the goal is to document the day as it naturally unfolds — the big moments, the quiet ones,
               and everything in between.
             </p>
@@ -1303,8 +1317,8 @@
           <div class="eyebrow">Featured Work</div>
           <h2>One story, captured in photo and film.</h2>
           <p>
-            We approach weddings and celebrations as one shared visual story — blending timeless photography
-            with cinematic film so everything feels cohesive, emotional, and true to the day.
+            We approach weddings, events, and festivals as one shared visual story — blending timeless photography
+            with cinematic film so everything feels cohesive, emotional, and true to the moment.
           </p>
         </div>
 
@@ -1313,7 +1327,7 @@
             <div class="featured-photo-grid">
               <div class="photo-main" style="background-image:url('gallery-1.jpg');">
                 <div class="portfolio-content">
-                  <span class="portfolio-kicker">1 Shot Photos</span>
+                  <span class="portfolio-kicker">1ShotPhotos</span>
                   <h3 class="portfolio-title">Moments that feel natural and lasting.</h3>
                 </div>
               </div>
@@ -1324,8 +1338,8 @@
             </div>
 
             <div class="featured-links">
-              <a class="btn btn-outline" href="https://instagram.com/YOUR_PHOTO_INSTAGRAM" target="_blank" rel="noopener noreferrer">Photo Instagram</a>
-              <a class="btn btn-primary" href="https://linktr.ee/YOUR_PHOTO_LINKTREE" target="_blank" rel="noopener noreferrer">View Full Gallery</a>
+              <a class="btn btn-outline" href="https://linktr.ee/1shotpro.la" target="_blank" rel="noopener noreferrer">Photo Portfolio</a>
+              <a class="btn btn-primary" href="https://linktr.ee/1shotpro.la" target="_blank" rel="noopener noreferrer">View More Work</a>
             </div>
           </div>
 
@@ -1333,6 +1347,7 @@
             <div class="film-panel-copy">
               <div class="eyebrow">Film</div>
               <h3>Wedding films that let you relive the day.</h3>
+              <p>Thoughtful, cinematic coverage for weddings, events, and festivals across South Louisiana.</p>
             </div>
 
             <div class="video-frame">
@@ -1376,8 +1391,8 @@
             </div>
 
             <div class="featured-links">
-              <a class="btn btn-outline" href="https://instagram.com/YOUR_VIDEO_INSTAGRAM" target="_blank" rel="noopener noreferrer">Film Instagram</a>
-              <a class="btn btn-primary" href="https://linktr.ee/YOUR_VIDEO_LINKTREE" target="_blank" rel="noopener noreferrer">Watch More Films</a>
+              <a class="btn btn-outline" href="https://linktr.ee/1shotpro.la" target="_blank" rel="noopener noreferrer">Film Portfolio</a>
+              <a class="btn btn-primary" href="https://linktr.ee/1shotpro.la" target="_blank" rel="noopener noreferrer">Watch More</a>
             </div>
           </div>
         </div>
@@ -1388,7 +1403,7 @@
       <div class="container">
         <div class="section-head testimonials-head">
           <div class="eyebrow">Kind Words</div>
-          <h2>What couples remember most.</h2>
+          <h2>What it felt like to work with 1Shot Productions.</h2>
           <p>
             Thoughtful coverage, calm communication, and final images and films that let the day live on.
           </p>
@@ -1396,17 +1411,16 @@
 
         <div class="testimonial-carousel" aria-label="Client testimonials">
           <div class="testimonial-track" id="testimonialTrack">
+
             <div class="testimonial-slide">
               <article class="testimonial-card featured-testimonial">
                 <div class="testimonial-avatar" style="background-image:url('testimonial-1.jpg');"></div>
                 <div class="testimonial-stars">★★★★★</div>
                 <p class="testimonial-quote">
-                  “Working with 1Shot Productions felt easy from start to finish. They captured the big moments,
-                  the quiet in-between moments, and everything felt so natural. Looking back through everything,
-                  it truly feels like our day.”
+                  "They were easy to work with, and the photos and video really captured the feeling of the day. It was exactly what we hoped for."
                 </p>
-                <div class="testimonial-name">Emily &amp; Jordan</div>
-                <p class="testimonial-role">Bride &amp; Groom</p>
+                <div class="testimonial-name">Jeannie L.</div>
+                <p class="testimonial-role">Wedding Client</p>
               </article>
             </div>
 
@@ -1415,10 +1429,9 @@
                 <div class="testimonial-avatar" style="background-image:url('testimonial-2.jpg');"></div>
                 <div class="testimonial-stars">★★★★★</div>
                 <p class="testimonial-quote">
-                  “The photos were beautiful, and the film brought back the feeling of the day in a way we didn’t
-                  expect. We are so thankful to have those memories preserved.”
+                  "I loved how they didn’t make anything feel forced. It was just us having a great time, and they captured that perfectly."
                 </p>
-                <div class="testimonial-name">Madison</div>
+                <div class="testimonial-name">Natalie H.</div>
                 <p class="testimonial-role">Wedding Client</p>
               </article>
             </div>
@@ -1428,22 +1441,22 @@
                 <div class="testimonial-avatar" style="background-image:url('testimonial-3.jpg');"></div>
                 <div class="testimonial-stars">★★★★★</div>
                 <p class="testimonial-quote">
-                  “Professional, calm, and easy to work with. Having photo and video together made everything feel
-                  seamless, and the final result felt polished and true to us.”
+                  "Honestly, they made the whole process easy. We got great shots without ever feeling like we had to perform for the camera."
                 </p>
-                <div class="testimonial-name">Alyssa &amp; Brandon</div>
-                <p class="testimonial-role">Event Client</p>
+                <div class="testimonial-name">Hazel M.</div>
+                <p class="testimonial-role">Wedding Client</p>
               </article>
             </div>
+
           </div>
 
           <div class="testimonial-controls">
             <button class="testimonial-arrow" type="button" aria-label="Previous testimonial" onclick="moveTestimonial(-1)">&#8592;</button>
 
             <div class="testimonial-dots" aria-label="Testimonial navigation">
-              <button class="testimonial-dot active" type="button" aria-label="Go to testimonial 1" onclick="goToTestimonial(0)"></button>
-              <button class="testimonial-dot" type="button" aria-label="Go to testimonial 2" onclick="goToTestimonial(1)"></button>
-              <button class="testimonial-dot" type="button" aria-label="Go to testimonial 3" onclick="goToTestimonial(2)"></button>
+              <button class="testimonial-dot active" type="button" aria-label="Go to testimonial 1"></button>
+              <button class="testimonial-dot" type="button" aria-label="Go to testimonial 2"></button>
+              <button class="testimonial-dot" type="button" aria-label="Go to testimonial 3"></button>
             </div>
 
             <button class="testimonial-arrow" type="button" aria-label="Next testimonial" onclick="moveTestimonial(1)">&#8594;</button>
@@ -1457,12 +1470,14 @@
         <div class="section-head">
           <div class="eyebrow">Packages</div>
           <h2>Collections</h2>
-          <p>We offer photography, videography, and bundled photo + video packages designed to provide clear coverage options for weddings and events.</p>
+          <p>
+            Wedding, event, and festival photo + film coverage designed to feel seamless, polished, and true to the moment.
+            Travel is available for an additional fee.
+          </p>
         </div>
 
         <div class="package-grid">
           <article class="package">
-            <div class="package-media" style="background-image:url('package-1.jpg');"></div>
             <div class="package-body">
               <span class="tag">Essential</span>
               <h3>The Keepsake</h3>
@@ -1479,7 +1494,6 @@
           </article>
 
           <article class="package">
-            <div class="package-media" style="background-image:url('package-2.jpg');"></div>
             <div class="package-body">
               <span class="tag">Most Popular</span>
               <h3>The Signature</h3>
@@ -1496,7 +1510,6 @@
           </article>
 
           <article class="package">
-            <div class="package-media" style="background-image:url('package-3.jpg');"></div>
             <div class="package-body">
               <span class="tag">Full Experience</span>
               <h3>The Heirloom</h3>
@@ -1512,6 +1525,13 @@
             </div>
           </article>
         </div>
+
+        <div class="packages-note">
+          <p>
+            Need coverage for an event, festival, or something outside of a wedding day? We also offer custom event and festival coverage.
+            Travel is available for an additional fee.
+          </p>
+        </div>
       </div>
     </section>
 
@@ -1520,12 +1540,13 @@
         <div class="contact-panel">
           <div class="eyebrow">Contact</div>
           <h2 style="font-size:clamp(2.4rem,4vw,4rem);">Let's get started</h2>
-          <p>Tell us about your event and we’ll get back to you with availability and package information.</p>
+          <p>Tell us about your wedding, event, or festival and we’ll get back to you with availability and package information.</p>
 
           <div class="contact-list">
             <div class="contact-item"><strong>Email:</strong> hello@1shotproductions.com</div>
             <div class="contact-item"><strong>Serving:</strong> Houma, Thibodaux, New Orleans, Baton Rouge, and South Louisiana</div>
-            <div class="contact-item"><strong>Instagram:</strong> @1shotproductions</div>
+            <div class="contact-item"><strong>Travel:</strong> Available for an additional fee</div>
+            <div class="contact-item"><strong>Portfolio:</strong> <a href="https://linktr.ee/1shotpro.la" target="_blank" rel="noopener noreferrer">linktr.ee/1shotpro.la</a></div>
           </div>
         </div>
 
@@ -1536,10 +1557,12 @@
             <input type="text" name="event_date" placeholder="Event date or preferred session timeframe" />
             <select name="service">
               <option value="">Select a service</option>
-              <option>Wedding Photo + Video</option>
+              <option>Wedding Photo + Film</option>
               <option>Photography Only</option>
               <option>Videography Only</option>
               <option>Event Coverage</option>
+              <option>Festival Coverage</option>
+              <option>Custom Quote</option>
             </select>
             <textarea name="message" placeholder="Tell us what you’re planning."></textarea>
             <button class="btn btn-primary" type="submit">Send Inquiry</button>
@@ -1585,6 +1608,7 @@
     }
 
     let testimonialIndex = 0;
+    let testimonialInterval = null;
 
     function updateTestimonialCarousel() {
       const track = document.getElementById('testimonialTrack');
@@ -1592,6 +1616,7 @@
       if (!track) return;
 
       track.style.transform = `translateX(-${testimonialIndex * 100}%)`;
+
       dots.forEach((dot, i) => {
         dot.classList.toggle('active', i === testimonialIndex);
       });
@@ -1605,7 +1630,52 @@
 
     function moveTestimonial(direction) {
       goToTestimonial(testimonialIndex + direction);
+      restartTestimonialAutoScroll();
     }
+
+    function startTestimonialAutoScroll() {
+      stopTestimonialAutoScroll();
+      testimonialInterval = setInterval(() => {
+        goToTestimonial(testimonialIndex + 1);
+      }, 5000);
+    }
+
+    function stopTestimonialAutoScroll() {
+      if (testimonialInterval) {
+        clearInterval(testimonialInterval);
+        testimonialInterval = null;
+      }
+    }
+
+    function restartTestimonialAutoScroll() {
+      stopTestimonialAutoScroll();
+      startTestimonialAutoScroll();
+    }
+
+    document.addEventListener('DOMContentLoaded', () => {
+      updateTestimonialCarousel();
+
+      const carousel = document.querySelector('.testimonial-carousel');
+      const dots = document.querySelectorAll('.testimonial-dot');
+
+      dots.forEach((dot, index) => {
+        dot.addEventListener('click', () => {
+          goToTestimonial(index);
+          restartTestimonialAutoScroll();
+        });
+      });
+
+      if (carousel) {
+        carousel.addEventListener('mouseenter', stopTestimonialAutoScroll);
+        carousel.addEventListener('mouseleave', startTestimonialAutoScroll);
+        carousel.addEventListener('focusin', stopTestimonialAutoScroll);
+        carousel.addEventListener('focusout', startTestimonialAutoScroll);
+        carousel.addEventListener('touchstart', stopTestimonialAutoScroll, { passive: true });
+        carousel.addEventListener('touchend', startTestimonialAutoScroll, { passive: true });
+      }
+
+      startTestimonialAutoScroll();
+    });
 
     const revealItems = document.querySelectorAll('.reveal');
 
