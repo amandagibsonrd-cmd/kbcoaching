@@ -3,20 +3,17 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>1Shot Productions | South Louisiana Photo + Film</title>
+
+  <title>1Shot Productions | South Louisiana Photo and Film</title>
   <meta name="description" content="Luxury wedding, event, and festival photography and videography in South Louisiana. 1Shot Productions offers seamless photo and film coverage in Houma, Thibodaux, New Orleans, Baton Rouge, and surrounding areas." />
   <meta name="keywords" content="South Louisiana wedding photographer, South Louisiana wedding videographer, event photographer Louisiana, festival videographer Louisiana, Houma wedding photographer, Thibodaux wedding photographer, New Orleans wedding videographer, Baton Rouge wedding photographer, 1Shot Productions, 1ShotPhotos" />
   <meta name="author" content="1Shot Productions" />
-  <meta property="og:title" content="1Shot Productions | Luxury Wedding Photo + Film in South Louisiana" />
+  <meta property="og:title" content="1Shot Productions | Luxury Wedding Photo and Film in South Louisiana" />
   <meta property="og:description" content="Luxury wedding, event, and festival photography and videography serving South Louisiana including Houma, Thibodaux, New Orleans, and Baton Rouge." />
   <meta property="og:type" content="website" />
   <meta property="og:image" content="hero.jpg" />
   <meta property="og:url" content="https://yourgithubusername.github.io/1shotproductions/" />
   <meta name="robots" content="index, follow" />
-  <meta name="geo.region" content="US-LA" />
-  <meta name="geo.placename" content="South Louisiana" />
-  <meta name="geo.position" content="29.5958;-90.7195" />
-  <meta name="ICBM" content="29.5958, -90.7195" />
   <link rel="icon" href="favicon.png" />
 
   <script type="application/ld+json">
@@ -26,7 +23,7 @@
     "name": "1Shot Productions",
     "image": "hero.jpg",
     "url": "https://yourgithubusername.github.io/1shotproductions/",
-    "email": "hello@1shotproductions.com",
+    "email": "keith@1shotphotos.com",
     "areaServed": ["Houma LA", "Thibodaux LA", "New Orleans LA", "Baton Rouge LA", "South Louisiana"],
     "service": ["Wedding Photography", "Wedding Videography", "Event Photography", "Event Videography", "Festival Photography", "Festival Videography"],
     "priceRange": "$$"
@@ -41,7 +38,6 @@
     :root {
       --bg: #ffffff;
       --paper: #ffffff;
-      --paper-solid: #ffffff;
       --ink: #111111;
       --muted: #6a6a6a;
       --accent: #b69a45;
@@ -56,12 +52,13 @@
     }
 
     * { box-sizing: border-box; }
+
     html { scroll-behavior: smooth; }
 
     body {
       margin: 0;
       font-family: "Inter", Arial, sans-serif;
-      background: #ffffff;
+      background: var(--bg);
       color: var(--ink);
       line-height: 1.65;
       -webkit-font-smoothing: antialiased;
@@ -81,7 +78,7 @@
       text-transform: uppercase;
       font-size: .75rem;
       color: var(--accent-dark);
-      font-weight: 700;
+      font-weight: 800;
       margin-bottom: 12px;
     }
 
@@ -103,15 +100,10 @@
       padding: 14px 24px;
       border-radius: 999px;
       border: 1px solid transparent;
-      font-weight: 600;
+      font-weight: 700;
       cursor: pointer;
       font-size: .96rem;
-      transition:
-        transform .25s ease,
-        background .25s ease,
-        border-color .25s ease,
-        color .25s ease,
-        box-shadow .25s ease;
+      transition: transform .25s ease, background .25s ease, border-color .25s ease, color .25s ease, box-shadow .25s ease;
     }
 
     .btn:hover {
@@ -148,6 +140,28 @@
 
     .btn-outline:hover { background: #fff8e7; }
 
+    .social-button {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      padding: 16px 30px;
+      border-radius: 999px;
+      background: linear-gradient(135deg, #111111, #2a2417);
+      color: #ffffff;
+      font-weight: 800;
+      letter-spacing: .08em;
+      text-transform: uppercase;
+      box-shadow: 0 16px 34px rgba(0,0,0,.18);
+      border: 1px solid rgba(182,154,69,.45);
+      transition: transform .25s ease, background .25s ease, box-shadow .25s ease;
+    }
+
+    .social-button:hover {
+      transform: translateY(-2px);
+      background: var(--accent-dark);
+      box-shadow: 0 20px 38px rgba(0,0,0,.24);
+    }
+
     header {
       position: sticky;
       top: 0;
@@ -171,7 +185,7 @@
       display: flex;
       align-items: center;
       gap: 12px;
-      font-weight: 700;
+      font-weight: 800;
       letter-spacing: .08em;
       text-transform: uppercase;
       font-size: .82rem;
@@ -197,7 +211,7 @@
     nav a {
       color: #3f3f3f;
       font-size: .95rem;
-      font-weight: 600;
+      font-weight: 700;
       transition: color .2s ease;
     }
 
@@ -228,7 +242,7 @@
     .hero-copy {
       position: relative;
       background:
-        linear-gradient(90deg, rgba(12,12,12,.68) 0%, rgba(12,12,12,.38) 42%, rgba(12,12,12,.12) 68%, rgba(12,12,12,.04) 100%),
+        linear-gradient(90deg, rgba(12,12,12,.70) 0%, rgba(12,12,12,.40) 44%, rgba(12,12,12,.12) 72%, rgba(12,12,12,.04) 100%),
         linear-gradient(180deg, rgba(0,0,0,.10), rgba(0,0,0,.16)),
         url('hero.jpg') center/cover no-repeat;
       color: white;
@@ -251,7 +265,7 @@
     .hero-copy > * { position: relative; z-index: 1; }
 
     .hero-copy p,
-    .hero-copy .eyebrow { color: rgba(255,255,255,.84); }
+    .hero-copy .eyebrow { color: rgba(255,255,255,.86); }
 
     .hero-copy h1 {
       font-size: clamp(3rem, 5vw, 4.8rem);
@@ -313,16 +327,6 @@
       margin-bottom: 12px;
     }
 
-    .team-section-head {
-      max-width: 860px;
-      margin-bottom: 34px;
-    }
-
-    .team-section-head h2 {
-      font-size: clamp(2.4rem, 4vw, 4rem);
-      margin-bottom: 14px;
-    }
-
     .package-grid,
     .contact-grid {
       display: grid;
@@ -332,6 +336,12 @@
     .package-grid {
       grid-template-columns: repeat(3, 1fr);
       align-items: stretch;
+    }
+
+    .event-package-grid {
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: 24px;
     }
 
     .contact-grid {
@@ -353,10 +363,7 @@
       padding: 34px 28px;
       text-align: center;
       box-shadow: 0 14px 34px rgba(0,0,0,.05);
-      transition:
-        transform .35s ease,
-        box-shadow .35s ease,
-        border-color .35s ease;
+      transition: transform .35s ease, box-shadow .35s ease, border-color .35s ease;
     }
 
     .team-card:hover {
@@ -415,10 +422,7 @@
       border-radius: 30px;
       padding: 24px;
       box-shadow: 0 14px 34px rgba(0,0,0,.05);
-      transition:
-        transform .35s ease,
-        box-shadow .35s ease,
-        border-color .35s ease;
+      transition: transform .35s ease, box-shadow .35s ease, border-color .35s ease;
     }
 
     .featured-photo-panel:hover,
@@ -458,10 +462,10 @@
       min-height: 100%;
     }
 
+    .photo-main::after,
     .photo-side-top::after,
     .photo-side-bottom-left::after,
-    .photo-side-bottom-right::after,
-    .photo-main::after {
+    .photo-side-bottom-right::after {
       content: "";
       position: absolute;
       inset: 0;
@@ -483,7 +487,7 @@
       text-transform: uppercase;
       color: rgba(255,255,255,.72);
       margin-bottom: 10px;
-      font-weight: 700;
+      font-weight: 800;
     }
 
     .portfolio-title {
@@ -622,7 +626,7 @@
       border: 1px solid rgba(255,255,255,.18);
       color: rgba(255,255,255,.9);
       font-size: .7rem;
-      font-weight: 700;
+      font-weight: 800;
       letter-spacing: .12em;
       text-transform: uppercase;
     }
@@ -660,10 +664,7 @@
       overflow: hidden;
       cursor: pointer;
       box-shadow: 0 14px 34px rgba(0,0,0,.05);
-      transition:
-        transform .35s ease,
-        box-shadow .35s ease,
-        border-color .35s ease;
+      transition: transform .35s ease, box-shadow .35s ease, border-color .35s ease;
     }
 
     .video-thumb:hover {
@@ -706,7 +707,7 @@
       letter-spacing: .14em;
       text-transform: uppercase;
       color: var(--accent-dark);
-      font-weight: 700;
+      font-weight: 800;
     }
 
     .video-thumb-title {
@@ -714,7 +715,7 @@
       font-size: .95rem;
       line-height: 1.35;
       color: var(--ink);
-      font-weight: 600;
+      font-weight: 700;
     }
 
     .featured-links {
@@ -759,10 +760,7 @@
       max-width: 920px;
       margin: 0 auto;
       text-align: center;
-      transition:
-        transform .45s ease,
-        box-shadow .45s ease,
-        border-color .45s ease;
+      transition: transform .45s ease, box-shadow .45s ease, border-color .45s ease;
     }
 
     .testimonial-card:hover {
@@ -809,7 +807,7 @@
     .testimonial-name {
       font-size: .98rem;
       color: var(--ink);
-      font-weight: 700;
+      font-weight: 800;
       margin-bottom: 4px;
     }
 
@@ -868,36 +866,12 @@
       transform: scale(1.18);
     }
 
-    .testimonial-carousel::before,
-    .testimonial-carousel::after {
-      content: "";
-      position: absolute;
-      top: 0;
-      bottom: 0;
-      width: 72px;
-      z-index: 2;
-      pointer-events: none;
-    }
-
-    .testimonial-carousel::before {
-      left: 0;
-      background: linear-gradient(90deg, rgba(255,255,255,1), rgba(255,255,255,0));
-    }
-
-    .testimonial-carousel::after {
-      right: 0;
-      background: linear-gradient(270deg, rgba(255,255,255,1), rgba(255,255,255,0));
-    }
-
     .package {
       padding: 0;
       display: flex;
       flex-direction: column;
-      background: var(--paper-solid);
-      transition:
-        transform .35s ease,
-        box-shadow .35s ease,
-        border-color .35s ease;
+      background: #ffffff;
+      transition: transform .35s ease, box-shadow .35s ease, border-color .35s ease;
     }
 
     .package:hover {
@@ -928,7 +902,7 @@
       background: rgba(182,154,69,.12);
       color: var(--accent-dark);
       font-size: .78rem;
-      font-weight: 700;
+      font-weight: 800;
       letter-spacing: .12em;
       text-transform: uppercase;
       width: fit-content;
@@ -949,16 +923,14 @@
       border: 1px solid var(--line);
       background: linear-gradient(180deg, #fff 0%, #fcfaf5 100%);
       box-shadow: 0 14px 34px rgba(0,0,0,.05);
+      color: var(--muted);
     }
 
     .contact-panel {
       background: var(--paper);
       backdrop-filter: blur(18px);
       padding: 36px;
-      transition:
-        transform .35s ease,
-        box-shadow .35s ease,
-        border-color .35s ease;
+      transition: transform .35s ease, box-shadow .35s ease, border-color .35s ease;
     }
 
     .contact-panel:hover {
@@ -1008,17 +980,42 @@
     }
 
     footer {
-      padding: 34px 0 48px;
+      padding: 44px 0 52px;
       border-top: 1px solid rgba(0,0,0,.06);
+      background: #faf8f2;
     }
 
     .footer-wrap {
-      display: flex;
-      flex-wrap: wrap;
-      justify-content: space-between;
-      gap: 20px;
+      display: grid;
+      grid-template-columns: 1fr 1.4fr;
+      gap: 28px;
       color: var(--muted);
       font-size: .92rem;
+      align-items: start;
+    }
+
+    .footer-links {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 12px;
+      align-items: center;
+      justify-content: flex-end;
+    }
+
+    .footer-links a:not(.social-button) {
+      padding: 10px 14px;
+      border-radius: 999px;
+      background: #ffffff;
+      border: 1px solid var(--line);
+      color: var(--ink);
+      font-weight: 700;
+      box-shadow: var(--shadow-soft);
+      transition: transform .25s ease, border-color .25s ease;
+    }
+
+    .footer-links a:not(.social-button):hover {
+      transform: translateY(-2px);
+      border-color: rgba(182,154,69,.35);
     }
 
     .reveal {
@@ -1035,8 +1032,13 @@
     @media (max-width: 1100px) {
       .featured-work-layout,
       .contact-grid,
-      .team-grid {
+      .team-grid,
+      .footer-wrap {
         grid-template-columns: 1fr;
+      }
+
+      .footer-links {
+        justify-content: flex-start;
       }
 
       .featured-photo-grid {
@@ -1131,7 +1133,8 @@
       }
 
       .hero-actions .btn,
-      .featured-links .btn {
+      .featured-links .btn,
+      .social-button {
         width: 100%;
       }
 
@@ -1209,8 +1212,10 @@
         padding: 20px;
       }
 
-      .featured-links {
+      .featured-links,
+      .footer-links {
         flex-direction: column;
+        align-items: stretch;
       }
 
       section {
@@ -1238,6 +1243,7 @@
     }
   </style>
 </head>
+
 <body>
   <header>
     <div class="container nav">
@@ -1252,7 +1258,9 @@
         <ul>
           <li><a href="#home">Home</a></li>
           <li><a href="#teams">About</a></li>
+          <li><a href="#work">Work</a></li>
           <li><a href="#packages">Packages</a></li>
+          <li><a href="#socials">Socials</a></li>
           <li><a href="#contact">Contact</a></li>
         </ul>
       </nav>
@@ -1278,12 +1286,12 @@
 
     <section id="teams" class="reveal">
       <div class="container">
-        <div class="section-head team-section-head">
+        <div class="section-head">
           <div class="eyebrow">About 1Shot Productions</div>
           <h2>One team for photo and film.</h2>
           <p>
             1Shot Productions brings photography and videography together as one coordinated experience.
-            Instead of hiring separate teams, couples and clients get a seamless approach — with visuals that feel cohesive,
+            Instead of hiring separate teams, couples and clients get a seamless approach with visuals that feel cohesive,
             communication that stays simple, and coverage designed to preserve both the look and the feeling of the moment.
           </p>
         </div>
@@ -1294,8 +1302,7 @@
             <h3>1ShotPhotos</h3>
             <p>
               Clean, timeless photography focused on genuine moments. From weddings to events and festivals,
-              the goal is to document the day as it naturally unfolds — the big moments, the quiet ones,
-              and everything in between.
+              the goal is to document the day as it naturally unfolds.
             </p>
           </div>
 
@@ -1317,7 +1324,7 @@
           <div class="eyebrow">Featured Work</div>
           <h2>One story, captured in photo and film.</h2>
           <p>
-            We approach weddings, events, and festivals as one shared visual story — blending timeless photography
+            We approach weddings, events, and festivals as one shared visual story, blending timeless photography
             with cinematic film so everything feels cohesive, emotional, and true to the moment.
           </p>
         </div>
@@ -1338,7 +1345,7 @@
             </div>
 
             <div class="featured-links">
-              <a class="btn btn-outline" href="https://linktr.ee/1shotpro.la" target="_blank" rel="noopener noreferrer">Photo Portfolio</a>
+              <a class="btn btn-outline" href="https://linktr.ee/1shotphotos" target="_blank" rel="noopener noreferrer">Photo Portfolio</a>
               <a class="btn btn-primary" href="https://linktr.ee/1shotpro.la" target="_blank" rel="noopener noreferrer">View More Work</a>
             </div>
           </div>
@@ -1372,26 +1379,26 @@
                   </div>
                 </button>
 
-                <button class="video-thumb" type="button" onclick="selectVideo({ id: 'VIDEO_ID_2', cover: 'video-cover-2.jpg', label: 'EP Productions', title: 'Wedding highlight film.', subtitle: 'Ceremony + Portrait Highlights' }, 1)">
+                <button class="video-thumb" type="button" onclick="selectVideo({ id: 'VIDEO_ID_2', cover: 'video-cover-2.jpeg', label: 'EP Productions', title: 'Wedding highlight film.', subtitle: 'Ceremony and portrait highlights' }, 1)">
                   <div class="video-thumb-image" style="background-image:url('video-cover-2.jpeg');"></div>
                   <div class="video-thumb-body">
                     <span class="video-thumb-label">Wedding Highlight</span>
-                    <span class="video-thumb-title">Ceremony + Portrait Highlights</span>
+                    <span class="video-thumb-title">Ceremony and Portrait Highlights</span>
                   </div>
                 </button>
 
-                <button class="video-thumb" type="button" onclick="selectVideo({ id: 'VIDEO_ID_3', cover: 'video-cover-3.jpg', label: 'EP Productions', title: 'Celebration film feature.', subtitle: 'Reception + Event Moments' }, 2)">
+                <button class="video-thumb" type="button" onclick="selectVideo({ id: 'VIDEO_ID_3', cover: 'video-cover-3.jpeg', label: 'EP Productions', title: 'Celebration film feature.', subtitle: 'Reception and event moments' }, 2)">
                   <div class="video-thumb-image" style="background-image:url('video-cover-3.jpeg');"></div>
                   <div class="video-thumb-body">
                     <span class="video-thumb-label">Celebration Film</span>
-                    <span class="video-thumb-title">Reception + Event Moments</span>
+                    <span class="video-thumb-title">Reception and Event Moments</span>
                   </div>
                 </button>
               </div>
             </div>
 
             <div class="featured-links">
-              <a class="btn btn-outline" href="https://linktr.ee/1shotpro.la" target="_blank" rel="noopener noreferrer">Film Portfolio</a>
+              <a class="btn btn-outline" href="https://linktr.ee/EPProduction" target="_blank" rel="noopener noreferrer">Film Portfolio</a>
               <a class="btn btn-primary" href="https://linktr.ee/1shotpro.la" target="_blank" rel="noopener noreferrer">Watch More</a>
             </div>
           </div>
@@ -1411,7 +1418,6 @@
 
         <div class="testimonial-carousel" aria-label="Client testimonials">
           <div class="testimonial-track" id="testimonialTrack">
-
             <div class="testimonial-slide">
               <article class="testimonial-card featured-testimonial">
                 <div class="testimonial-avatar" style="background-image:url('testimonial-1.png');"></div>
@@ -1447,7 +1453,6 @@
                 <p class="testimonial-role">Wedding Client</p>
               </article>
             </div>
-
           </div>
 
           <div class="testimonial-controls">
@@ -1469,61 +1474,102 @@
       <div class="container">
         <div class="section-head">
           <div class="eyebrow">Packages</div>
-          <h2>Collections</h2>
+          <h2>Wedding and Event Collections</h2>
           <p>
-            Wedding, event, and festival photo + film coverage designed to feel seamless, polished, and true to the moment.
-            Travel is available for an additional fee.
+            Separate wedding and event packages are available so couples, organizations, festivals,
+            and private events can choose the coverage that fits best.
           </p>
+        </div>
+
+        <div class="section-head" style="margin-top:20px;">
+          <div class="eyebrow">Wedding Packages</div>
+          <h2 style="font-size:clamp(2rem,3vw,3rem);">Photo and Film Packages</h2>
         </div>
 
         <div class="package-grid">
           <article class="package">
             <div class="package-body">
               <span class="tag">Essential</span>
-              <h3>The Keepsake</h3>
-              <div class="price">$2,200</div>
-              <p>A beautiful starting point for clients who want thoughtful, polished coverage.</p>
+              <h3>Essential</h3>
+              <div class="price">$2,500</div>
               <ul>
-                <li>4 hours of photo + video coverage</li>
-                <li>1 photographer + 1 videographer</li>
-                <li>300+ edited images</li>
-                <li>3–4 minute highlight film</li>
+                <li>All digital images with print release</li>
+                <li>5 minute or longer basic feature film</li>
+                <li>30 second reel</li>
               </ul>
-              <a class="btn btn-primary" href="#contact">Book This Package</a>
+              <a class="btn btn-primary" href="#contact">Inquire</a>
             </div>
           </article>
 
           <article class="package">
             <div class="package-body">
-              <span class="tag">Most Popular</span>
-              <h3>The Signature</h3>
-              <div class="price">$3,000</div>
-              <p>A balanced experience with enough room for the story, details, and emotional in-between moments.</p>
+              <span class="tag">Signature</span>
+              <h3>Signature</h3>
+              <div class="price">$3,500</div>
               <ul>
-                <li>6 hours of photo + video coverage</li>
-                <li>1 photographer + 1 videographer</li>
-                <li>500+ edited images</li>
-                <li>5–7 minute highlight film</li>
+                <li>All digital images with print release</li>
+                <li>8 minute or longer extended feature film</li>
+                <li>30 second reel</li>
+                <li>Engagement photo and film session with digitals and video</li>
               </ul>
-              <a class="btn btn-primary" href="#contact">Book This Package</a>
+              <a class="btn btn-primary" href="#contact">Inquire</a>
             </div>
           </article>
 
           <article class="package">
             <div class="package-body">
-              <span class="tag">Full Experience</span>
-              <h3>The Heirloom</h3>
-              <div class="price">$3,800</div>
-              <p>More time, more atmosphere, and a fuller story for clients who want the complete experience.</p>
+              <span class="tag">Premiere</span>
+              <h3>Premiere</h3>
+              <div class="price">$5,000</div>
               <ul>
-                <li>8 hours of photo + video coverage</li>
-                <li>Second shooter option</li>
-                <li>700+ edited images</li>
-                <li>7–9 minute highlight film</li>
+                <li>All digital images with print release</li>
+                <li>15 minute or longer full length feature film</li>
+                <li>30 second reel</li>
+                <li>Engagement photo and film session with digitals and video</li>
+                <li>Lifetime anniversary photo sessions</li>
+                <li>Additional wedding photographer</li>
+                <li>Videobook keepsake</li>
               </ul>
-              <a class="btn btn-primary" href="#contact">Book This Package</a>
+              <a class="btn btn-primary" href="#contact">Inquire</a>
             </div>
           </article>
+        </div>
+
+        <div class="packages-note">
+          <strong>Additional wedding coverage:</strong> $500 for each additional hour of photo and film coverage.
+        </div>
+
+        <div class="section-head" style="margin-top:70px;">
+          <div class="eyebrow">Event Package</div>
+          <h2 style="font-size:clamp(2rem,3vw,3rem);">Events, Festivals and Sponsorship Coverage</h2>
+          <p>
+            Ideal for local events, festivals, business celebrations, community gatherings,
+            fundraisers, and sponsorship coverage.
+          </p>
+        </div>
+
+        <div class="event-package-grid">
+          <article class="package">
+            <div class="package-body">
+              <span class="tag">Event Package</span>
+              <h3>Event Coverage</h3>
+              <div class="price">$500/hr</div>
+              <ul>
+                <li>Professional photo coverage</li>
+                <li>Cinematic film coverage</li>
+                <li>Events of all types and sizes</li>
+                <li>Hourly coverage</li>
+                <li>Digital gallery delivery</li>
+                <li>In kind donation and sponsorship options available</li>
+              </ul>
+              <a class="btn btn-primary" href="#contact">Inquire About Event Coverage</a>
+            </div>
+          </article>
+        </div>
+
+        <div class="packages-note">
+          Travel is available for an additional cost. Custom quotes are available for multi day events,
+          festivals, sponsorship coverage, and nonprofit or community partnerships.
         </div>
       </div>
     </section>
@@ -1532,14 +1578,17 @@
       <div class="container contact-grid">
         <div class="contact-panel">
           <div class="eyebrow">Contact</div>
-          <h2 style="font-size:clamp(2.4rem,4vw,4rem);">Let's get started</h2>
+          <h2 style="font-size:clamp(2.4rem,4vw,4rem);">Let’s get started</h2>
           <p>Tell us about your wedding, event, or festival and we’ll get back to you with availability and package information.</p>
 
           <div class="contact-list">
-            <div class="contact-item"><strong>Email:</strong> hello@1shotproductions.com</div>
+            <div class="contact-item"><strong>Keith Blalock:</strong> <a href="tel:9852090950">985 209 0950</a></div>
+            <div class="contact-item"><strong>Email:</strong> <a href="mailto:keith@1shotphotos.com">keith@1shotphotos.com</a></div>
+            <div class="contact-item"><strong>Erin Price:</strong> <a href="tel:9858703246">985 870 3246</a></div>
+            <div class="contact-item"><strong>Email:</strong> <a href="mailto:eppro.la@gmail.com">eppro.la@gmail.com</a></div>
             <div class="contact-item"><strong>Serving:</strong> Houma, Thibodaux, New Orleans, Baton Rouge, and South Louisiana.</div>
             <div class="contact-item"><strong>Travel:</strong> Available for an additional fee</div>
-            <div class="contact-item"><strong>Portfolio:</strong> <a href="https://linktr.ee/1shotpro.la" target="_blank" rel="noopener noreferrer">linktr.ee/1shotpro.la</a></div>
+            <div class="contact-item"><strong>Portfolio:</strong> <a href="https://linktr.ee/1shotpro.la" target="_blank" rel="noopener noreferrer">View our Linktree</a></div>
           </div>
         </div>
 
@@ -1547,10 +1596,10 @@
           <form action="https://formspree.io/f/YOUR_FORM_ID" method="POST">
             <input type="text" name="name" placeholder="Your name" required />
             <input type="email" name="email" placeholder="Email address" required />
-            <input type="text" name="event_date" placeholder="Event date or preferred session timeframe" />
+            <input type="text" name="event_date" placeholder="Event date or preferred timeframe" />
             <select name="service">
               <option value="">Select a service</option>
-              <option>Wedding Photo + Film</option>
+              <option>Wedding Photo and Film</option>
               <option>Photography Only</option>
               <option>Videography Only</option>
               <option>Event Coverage</option>
@@ -1565,10 +1614,20 @@
     </section>
   </main>
 
-  <footer>
+  <footer id="socials">
     <div class="container footer-wrap">
-      <div>© 2026 1Shot Productions. All rights reserved.</div>
-      <div>Designed for GitHub Pages • Keep images in the root folder</div>
+      <div>
+        <strong>© 2026 1Shot Productions. All rights reserved.</strong>
+        <p style="margin-top:8px;">Photo and film for weddings, events, festivals, and celebrations.</p>
+      </div>
+
+      <div class="footer-links">
+        <a class="social-button" href="https://linktr.ee/1shotpro.la" target="_blank" rel="noopener noreferrer">View Our Socials</a>
+        <a href="https://linktr.ee/1shotphotos" target="_blank" rel="noopener noreferrer">1ShotPhotos</a>
+        <a href="https://linktr.ee/EPProduction" target="_blank" rel="noopener noreferrer">EP Production</a>
+        <a href="mailto:keith@1shotphotos.com">Keith Email</a>
+        <a href="mailto:eppro.la@gmail.com">Erin Email</a>
+      </div>
     </div>
   </footer>
 
@@ -1668,6 +1727,13 @@
       }
 
       startTestimonialAutoScroll();
+
+      document.querySelectorAll('nav a').forEach((link) => {
+        link.addEventListener('click', () => {
+          const nav = document.querySelector('nav');
+          if (nav) nav.classList.remove('open');
+        });
+      });
     });
 
     const revealItems = document.querySelectorAll('.reveal');
